@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_ControlGastosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Concepto">
+    <Key>
+      <PropertyRef Name="idConcepto" />
+    </Key>
+    <Property Name="idConcepto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipoTransaccion" Type="bit" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Cuenta">
+    <Key>
+      <PropertyRef Name="idCuenta" />
+    </Key>
+    <Property Name="idCuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Transaccion">
+    <Key>
+      <PropertyRef Name="idTransaccion" />
+    </Key>
+    <Property Name="idTransaccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="monto" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="fechaTransaccion" Type="datetime" Nullable="false" />
+    <Property Name="idCuenta" Type="int" Nullable="false" />
+    <Property Name="idConcepto" Type="int" Nullable="false" />
+    <Property Name="idTransaccionRef" Type="bit" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="correoElectronico" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contrasena" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__tbl_Conce__idUsu__1CF15040">
+    <End Role="tbl_Usuario" Type="Self.tbl_Usuario" Multiplicity="1" />
+    <End Role="tbl_Concepto" Type="Self.tbl_Concepto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tbl_Concepto">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Cuent__idUsu__1DE57479">
+    <End Role="tbl_Usuario" Type="Self.tbl_Usuario" Multiplicity="1" />
+    <End Role="tbl_Cuenta" Type="Self.tbl_Cuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Usuario">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="tbl_Cuenta">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Trans__idCon__1ED998B2">
+    <End Role="tbl_Concepto" Type="Self.tbl_Concepto" Multiplicity="1" />
+    <End Role="tbl_Transaccion" Type="Self.tbl_Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Concepto">
+        <PropertyRef Name="idConcepto" />
+      </Principal>
+      <Dependent Role="tbl_Transaccion">
+        <PropertyRef Name="idConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Trans__idCue__1FCDBCEB">
+    <End Role="tbl_Cuenta" Type="Self.tbl_Cuenta" Multiplicity="1" />
+    <End Role="tbl_Transaccion" Type="Self.tbl_Transaccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Cuenta">
+        <PropertyRef Name="idCuenta" />
+      </Principal>
+      <Dependent Role="tbl_Transaccion">
+        <PropertyRef Name="idCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_ControlGastosModelStoreContainer">
+    <EntitySet Name="tbl_Concepto" EntityType="Self.tbl_Concepto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Cuenta" EntityType="Self.tbl_Cuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Transaccion" EntityType="Self.tbl_Transaccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Usuario" EntityType="Self.tbl_Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbl_Conce__idUsu__1CF15040" Association="Self.FK__tbl_Conce__idUsu__1CF15040">
+      <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
+      <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Cuent__idUsu__1DE57479" Association="Self.FK__tbl_Cuent__idUsu__1DE57479">
+      <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
+      <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Trans__idCon__1ED998B2" Association="Self.FK__tbl_Trans__idCon__1ED998B2">
+      <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
+      <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Trans__idCue__1FCDBCEB" Association="Self.FK__tbl_Trans__idCue__1FCDBCEB">
+      <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
+      <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

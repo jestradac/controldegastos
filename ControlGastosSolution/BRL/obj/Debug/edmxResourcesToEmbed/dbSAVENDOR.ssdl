@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbSAVendorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="nivel" Type="int" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="idCompra" />
+    </Key>
+    <Property Name="idCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="idEstadoCompra" Type="int" Nullable="false" />
+    <Property Name="idModalidadPago" Type="int" Nullable="false" />
+    <Property Name="codigoTransaccion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DescuentoAplicable">
+    <Key>
+      <PropertyRef Name="idDescuentoAplicable" />
+    </Key>
+    <Property Name="idDescuentoAplicable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMedida" Type="int" Nullable="false" />
+    <Property Name="decuento" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DetalleCompra">
+    <Key>
+      <PropertyRef Name="idDetalleCompra" />
+    </Key>
+    <Property Name="idDetalleCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idCompra" Type="int" />
+    <Property Name="idListaPrecio" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idMedida" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="fechaSeleccion" Type="datetime2" Precision="0" Nullable="false" />
+    <Property Name="eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idTipoEmpresa" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="logo" Type="varchar" MaxLength="200" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="responsable" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="15" />
+    <Property Name="urlMain" Type="varchar" MaxLength="45" />
+    <Property Name="urlFb" Type="varchar" MaxLength="45" />
+    <Property Name="urlIg" Type="varchar" MaxLength="45" />
+    <Property Name="urlTt" Type="varchar" MaxLength="45" />
+    <Property Name="telefonoWa" Type="varchar" MaxLength="45" />
+    <Property Name="colorPagina" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="razonSocial" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="nit" Type="bigint" Nullable="false" />
+    <Property Name="LatLong" Type="varchar" MaxLength="50" />
+    <Property Name="urlImgEncargado" Type="varchar" MaxLength="500" />
+    <Property Name="urlImgUbicacion" Type="varchar" MaxLength="500" />
+    <Property Name="urlImgCI" Type="varchar" MaxLength="500" />
+    <Property Name="urlImgFactura" Type="varchar" MaxLength="500" />
+    <Property Name="urlImgNIT" Type="varchar" MaxLength="500" />
+    <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="habilitado" Type="bit" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="empresaModalidadPago">
+    <Key>
+      <PropertyRef Name="idEmpresaModalidadPago" />
+    </Key>
+    <Property Name="idEmpresaModalidadPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idModalidadPago" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbSAVendor.dbo.EspecialidadEmpresa' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="EspecialidadEmpresa">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoCompra">
+    <Key>
+      <PropertyRef Name="idEstadoCompra" />
+    </Key>
+    <Property Name="idEstadoCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImagenProducto">
+    <Key>
+      <PropertyRef Name="idImagenProducto" />
+    </Key>
+    <Property Name="idImagenProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="urlImagen" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="titulo" Type="varchar" MaxLength="45" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="esPrincipal" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ListaPrecio">
+    <Key>
+      <PropertyRef Name="idListaPrecio" />
+    </Key>
+    <Property Name="idListaPrecio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idDescuentoAplicable" Type="int" Nullable="false" />
+    <Property Name="idMedida" Type="int" Nullable="false" />
+    <Property Name="Codigo" Type="varchar" MaxLength="45" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="stock" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="esDestacado" Type="bit" Nullable="false" />
+    <Property Name="nivel" Type="int" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medida">
+    <Key>
+      <PropertyRef Name="idMedida" />
+    </Key>
+    <Property Name="idMedida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="abreviatura" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModalidadPago">
+    <Key>
+      <PropertyRef Name="idModalidadPago" />
+    </Key>
+    <Property Name="idModalidadPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametrosGenerales">
+    <Key>
+      <PropertyRef Name="idParametrosGenerales" />
+    </Key>
+    <Property Name="idParametrosGenerales" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="valor" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="detalle" Type="varchar" MaxLength="600" />
+    <Property Name="descripcionEnvio" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductoCategoria">
+    <Key>
+      <PropertyRef Name="idProductoCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idProductoCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductoTag">
+    <Key>
+      <PropertyRef Name="idProductoTag" />
+    </Key>
+    <Property Name="idProductoTag" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idtag" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="idServicio" />
+    </Key>
+    <Property Name="idServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="precioMensual" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="porcentajeTransaccional" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioEmpresa">
+    <Key>
+      <PropertyRef Name="idServicioEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idServicio" Type="int" Nullable="false" />
+    <Property Name="idServicioEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="idtag" />
+    </Key>
+    <Property Name="idtag" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoEmpresa">
+    <Key>
+      <PropertyRef Name="idTipoEmpresa" />
+    </Key>
+    <Property Name="idTipoEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="idTipoUsuario" />
+    </Key>
+    <Property Name="idTipoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idTipoUsuario" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="esPrincipal" Type="bit" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="12" />
+    <Property Name="eliminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__DetalleCo__idCom__7C4F7684">
+    <End Role="Compra" Type="Self.Compra" Multiplicity="0..1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="idCompra" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idLis__7D439ABD">
+    <End Role="ListaPrecio" Type="Self.ListaPrecio" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecio">
+        <PropertyRef Name="idListaPrecio" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idListaPrecio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idMed__7F2BE32F">
+    <End Role="Medida" Type="Self.Medida" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idPro__7E37BEF6">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="Self.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empresaMo__idEmp__68487DD7">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="empresaModalidadPago" Type="Self.empresaModalidadPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="empresaModalidadPago">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empresaMo__idMod__693CA210">
+    <End Role="ModalidadPago" Type="Self.ModalidadPago" Multiplicity="1" />
+    <End Role="empresaModalidadPago" Type="Self.empresaModalidadPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Principal>
+      <Dependent Role="empresaModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductoT__idPro__71D1E811">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ProductoTag" Type="Self.ProductoTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ProductoTag">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductoT__idtag__70DDC3D8">
+    <End Role="Tag" Type="Self.Tag" Multiplicity="1" />
+    <End Role="ProductoTag" Type="Self.ProductoTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="idtag" />
+      </Principal>
+      <Dependent Role="ProductoTag">
+        <PropertyRef Name="idtag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Categoria_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Categoria">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_EstadoCompra">
+    <End Role="EstadoCompra" Type="Self.EstadoCompra" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoCompra">
+        <PropertyRef Name="idEstadoCompra" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEstadoCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_ModalidadPago">
+    <End Role="ModalidadPago" Type="Self.ModalidadPago" Multiplicity="1" />
+    <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idModalidadPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DescuentoAplicable_Medida">
+    <End Role="Medida" Type="Self.Medida" Multiplicity="1" />
+    <End Role="DescuentoAplicable" Type="Self.DescuentoAplicable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="DescuentoAplicable">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_TipoEmpresa">
+    <End Role="TipoEmpresa" Type="Self.TipoEmpresa" Multiplicity="1" />
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEmpresa">
+        <PropertyRef Name="idTipoEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="idTipoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EspecialidadEmpresa_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="EspecialidadEmpresa" Type="Self.EspecialidadEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="EspecialidadEmpresa">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EspecialidadEmpresa_Especialidad">
+    <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+    <End Role="EspecialidadEmpresa" Type="Self.EspecialidadEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especialidad">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="EspecialidadEmpresa">
+        <PropertyRef Name="idEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImagenProducto_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ImagenProducto" Type="Self.ImagenProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ImagenProducto">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecio_DescuentoAplicable">
+    <End Role="DescuentoAplicable" Type="Self.DescuentoAplicable" Multiplicity="1" />
+    <End Role="ListaPrecio" Type="Self.ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DescuentoAplicable">
+        <PropertyRef Name="idDescuentoAplicable" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idDescuentoAplicable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecio_Medida">
+    <End Role="Medida" Type="Self.Medida" Multiplicity="1" />
+    <End Role="ListaPrecio" Type="Self.ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecio_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ListaPrecio" Type="Self.ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductoCategoria_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="ProductoCategoria" Type="Self.ProductoCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="ProductoCategoria">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductoCategoria_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ProductoCategoria" Type="Self.ProductoCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ProductoCategoria">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioEmpresa_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="ServicioEmpresa" Type="Self.ServicioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="ServicioEmpresa">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioEmpresa_Servicio">
+    <End Role="Servicio" Type="Self.Servicio" Multiplicity="1" />
+    <End Role="ServicioEmpresa" Type="Self.ServicioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="idServicio" />
+      </Principal>
+      <Dependent Role="ServicioEmpresa">
+        <PropertyRef Name="idServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_TipoUsuario">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbSAVendorModelStoreContainer">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compra" EntityType="Self.Compra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DescuentoAplicable" EntityType="Self.DescuentoAplicable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleCompra" EntityType="Self.DetalleCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="empresaModalidadPago" EntityType="Self.empresaModalidadPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoCompra" EntityType="Self.EstadoCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImagenProducto" EntityType="Self.ImagenProducto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListaPrecio" EntityType="Self.ListaPrecio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medida" EntityType="Self.Medida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModalidadPago" EntityType="Self.ModalidadPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParametrosGenerales" EntityType="Self.ParametrosGenerales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductoCategoria" EntityType="Self.ProductoCategoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductoTag" EntityType="Self.ProductoTag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicioEmpresa" EntityType="Self.ServicioEmpresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoEmpresa" EntityType="Self.TipoEmpresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EspecialidadEmpresa" EntityType="Self.EspecialidadEmpresa" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [EspecialidadEmpresa].[idEspecialidad] AS [idEspecialidad], 
+    [EspecialidadEmpresa].[idEmpresa] AS [idEmpresa]
+    FROM [dbo].[EspecialidadEmpresa] AS [EspecialidadEmpresa]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__DetalleCo__idCom__7C4F7684" Association="Self.FK__DetalleCo__idCom__7C4F7684">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idLis__7D439ABD" Association="Self.FK__DetalleCo__idLis__7D439ABD">
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idMed__7F2BE32F" Association="Self.FK__DetalleCo__idMed__7F2BE32F">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idPro__7E37BEF6" Association="Self.FK__DetalleCo__idPro__7E37BEF6">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empresaMo__idEmp__68487DD7" Association="Self.FK__empresaMo__idEmp__68487DD7">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="empresaModalidadPago" EntitySet="empresaModalidadPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empresaMo__idMod__693CA210" Association="Self.FK__empresaMo__idMod__693CA210">
+      <End Role="ModalidadPago" EntitySet="ModalidadPago" />
+      <End Role="empresaModalidadPago" EntitySet="empresaModalidadPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductoT__idPro__71D1E811" Association="Self.FK__ProductoT__idPro__71D1E811">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductoTag" EntitySet="ProductoTag" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductoT__idtag__70DDC3D8" Association="Self.FK__ProductoT__idtag__70DDC3D8">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="ProductoTag" EntitySet="ProductoTag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Categoria_Empresa" Association="Self.FK_Categoria_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Categoria" EntitySet="Categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_Cliente" Association="Self.FK_Compra_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_EstadoCompra" Association="Self.FK_Compra_EstadoCompra">
+      <End Role="EstadoCompra" EntitySet="EstadoCompra" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_ModalidadPago" Association="Self.FK_Compra_ModalidadPago">
+      <End Role="ModalidadPago" EntitySet="ModalidadPago" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DescuentoAplicable_Medida" Association="Self.FK_DescuentoAplicable_Medida">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="DescuentoAplicable" EntitySet="DescuentoAplicable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_TipoEmpresa" Association="Self.FK_Empresa_TipoEmpresa">
+      <End Role="TipoEmpresa" EntitySet="TipoEmpresa" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EspecialidadEmpresa_Empresa" Association="Self.FK_EspecialidadEmpresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EspecialidadEmpresa" EntitySet="EspecialidadEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EspecialidadEmpresa_Especialidad" Association="Self.FK_EspecialidadEmpresa_Especialidad">
+      <End Role="Especialidad" EntitySet="Especialidad" />
+      <End Role="EspecialidadEmpresa" EntitySet="EspecialidadEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImagenProducto_Producto" Association="Self.FK_ImagenProducto_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ImagenProducto" EntitySet="ImagenProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecio_DescuentoAplicable" Association="Self.FK_ListaPrecio_DescuentoAplicable">
+      <End Role="DescuentoAplicable" EntitySet="DescuentoAplicable" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecio_Medida" Association="Self.FK_ListaPrecio_Medida">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecio_Producto" Association="Self.FK_ListaPrecio_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Empresa" Association="Self.FK_Producto_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoCategoria_Categoria" Association="Self.FK_ProductoCategoria_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="ProductoCategoria" EntitySet="ProductoCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoCategoria_Producto" Association="Self.FK_ProductoCategoria_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductoCategoria" EntitySet="ProductoCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioEmpresa_Empresa" Association="Self.FK_ServicioEmpresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ServicioEmpresa" EntitySet="ServicioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioEmpresa_Servicio" Association="Self.FK_ServicioEmpresa_Servicio">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="ServicioEmpresa" EntitySet="ServicioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Empresa" Association="Self.FK_Usuario_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_TipoUsuario" Association="Self.FK_Usuario_TipoUsuario">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

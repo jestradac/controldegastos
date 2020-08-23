@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbSAVendorModelStoreContainer" CdmEntityContainer="dbSAVendorEntities">
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compra">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Compra">
+        <MappingFragment StoreEntitySet="Compra">
+          <ScalarProperty Name="codigoTransaccion" ColumnName="codigoTransaccion" />
+          <ScalarProperty Name="idModalidadPago" ColumnName="idModalidadPago" />
+          <ScalarProperty Name="idEstadoCompra" ColumnName="idEstadoCompra" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idCompra" ColumnName="idCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DescuentoAplicable">
+      <EntityTypeMapping TypeName="dbSAVendorModel.DescuentoAplicable">
+        <MappingFragment StoreEntitySet="DescuentoAplicable">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="decuento" ColumnName="decuento" />
+          <ScalarProperty Name="idMedida" ColumnName="idMedida" />
+          <ScalarProperty Name="idDescuentoAplicable" ColumnName="idDescuentoAplicable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleCompra">
+      <EntityTypeMapping TypeName="dbSAVendorModel.DetalleCompra">
+        <MappingFragment StoreEntitySet="DetalleCompra">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fechaSeleccion" ColumnName="fechaSeleccion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idMedida" ColumnName="idMedida" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
+          <ScalarProperty Name="idCompra" ColumnName="idCompra" />
+          <ScalarProperty Name="idDetalleCompra" ColumnName="idDetalleCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="habilitado" ColumnName="habilitado" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="urlImgNIT" ColumnName="urlImgNIT" />
+          <ScalarProperty Name="urlImgFactura" ColumnName="urlImgFactura" />
+          <ScalarProperty Name="urlImgCI" ColumnName="urlImgCI" />
+          <ScalarProperty Name="urlImgUbicacion" ColumnName="urlImgUbicacion" />
+          <ScalarProperty Name="urlImgEncargado" ColumnName="urlImgEncargado" />
+          <ScalarProperty Name="LatLong" ColumnName="LatLong" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="colorPagina" ColumnName="colorPagina" />
+          <ScalarProperty Name="telefonoWa" ColumnName="telefonoWa" />
+          <ScalarProperty Name="urlTt" ColumnName="urlTt" />
+          <ScalarProperty Name="urlIg" ColumnName="urlIg" />
+          <ScalarProperty Name="urlFb" ColumnName="urlFb" />
+          <ScalarProperty Name="urlMain" ColumnName="urlMain" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="responsable" ColumnName="responsable" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idTipoEmpresa" ColumnName="idTipoEmpresa" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empresaModalidadPago">
+      <EntityTypeMapping TypeName="dbSAVendorModel.empresaModalidadPago">
+        <MappingFragment StoreEntitySet="empresaModalidadPago">
+          <ScalarProperty Name="idModalidadPago" ColumnName="idModalidadPago" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idEmpresaModalidadPago" ColumnName="idEmpresaModalidadPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidad">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Especialidad">
+        <MappingFragment StoreEntitySet="Especialidad">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoCompra">
+      <EntityTypeMapping TypeName="dbSAVendorModel.EstadoCompra">
+        <MappingFragment StoreEntitySet="EstadoCompra">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idEstadoCompra" ColumnName="idEstadoCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagenProducto">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ImagenProducto">
+        <MappingFragment StoreEntitySet="ImagenProducto">
+          <ScalarProperty Name="esPrincipal" ColumnName="esPrincipal" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="urlImagen" ColumnName="urlImagen" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idImagenProducto" ColumnName="idImagenProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medida">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Medida">
+        <MappingFragment StoreEntitySet="Medida">
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idMedida" ColumnName="idMedida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModalidadPago">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ModalidadPago">
+        <MappingFragment StoreEntitySet="ModalidadPago">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idModalidadPago" ColumnName="idModalidadPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametrosGenerales">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ParametrosGenerales">
+        <MappingFragment StoreEntitySet="ParametrosGenerales">
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idParametrosGenerales" ColumnName="idParametrosGenerales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="descripcionEnvio" ColumnName="descripcionEnvio" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductoCategoria">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ProductoCategoria">
+        <MappingFragment StoreEntitySet="ProductoCategoria">
+          <ScalarProperty Name="idProductoCategoria" ColumnName="idProductoCategoria" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductoTag">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ProductoTag">
+        <MappingFragment StoreEntitySet="ProductoTag">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idtag" ColumnName="idtag" />
+          <ScalarProperty Name="idProductoTag" ColumnName="idProductoTag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicio">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Servicio">
+        <MappingFragment StoreEntitySet="Servicio">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="porcentajeTransaccional" ColumnName="porcentajeTransaccional" />
+          <ScalarProperty Name="precioMensual" ColumnName="precioMensual" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioEmpresa">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ServicioEmpresa">
+        <MappingFragment StoreEntitySet="ServicioEmpresa">
+          <ScalarProperty Name="idServicioEmpresa" ColumnName="idServicioEmpresa" />
+          <ScalarProperty Name="idServicio" ColumnName="idServicio" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tag">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idtag" ColumnName="idtag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEmpresa">
+      <EntityTypeMapping TypeName="dbSAVendorModel.TipoEmpresa">
+        <MappingFragment StoreEntitySet="TipoEmpresa">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idTipoEmpresa" ColumnName="idTipoEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="dbSAVendorModel.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="dbSAVendorModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="esPrincipal" ColumnName="esPrincipal" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EspecialidadEmpresa" TypeName="dbSAVendorModel.EspecialidadEmpresa" StoreEntitySet="EspecialidadEmpresa">
+      <EndProperty Name="Especialidad">
+        <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+      </EndProperty>
+      <EndProperty Name="Empresa">
+        <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="ListaPrecio">
+      <EntityTypeMapping TypeName="dbSAVendorModel.ListaPrecio">
+        <MappingFragment StoreEntitySet="ListaPrecio">
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="esDestacado" ColumnName="esDestacado" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="idMedida" ColumnName="idMedida" />
+          <ScalarProperty Name="idDescuentoAplicable" ColumnName="idDescuentoAplicable" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

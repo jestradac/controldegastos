@@ -1,0 +1,384 @@
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\UI.dll.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\UI.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\UI.pdb
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csc.exe
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csc.exe.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csc.rsp
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csi.exe
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csi.exe.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\csi.rsp
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.AppContext.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Collections.Immutable.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Console.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.IO.Compression.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Reflection.Metadata.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.AccessControl.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Claims.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.ValueTuple.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\vbc.exe
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\vbc.exe.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\vbc.rsp
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\BRL.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\EntityFramework.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\BRL.pdb
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\BRL.dll.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\bin\EntityFramework.xml
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\obj\Debug\UI.csproj.CopyComplete
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\obj\Debug\UI.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\UI\obj\Debug\UI.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\UI.dll.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\UI.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\UI.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csc.exe
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csc.exe.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csc.rsp
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csi.exe
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csi.exe.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\csi.rsp
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.AppContext.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Console.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.IO.Compression.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Claims.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.ValueTuple.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\vbc.exe
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\vbc.exe.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\vbc.rsp
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\BRL.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\System.Data.SqlClient.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\EntityFramework.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\BRL.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\BRL.dll.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\System.Data.SqlClient.xml
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\EntityFramework.xml
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\obj\Debug\UI.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\obj\Debug\UI.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\UI.dll.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\UI.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\UI.pdb
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csc.exe
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csc.exe.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csc.rsp
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csi.exe
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csi.exe.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\csi.rsp
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.AppContext.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Console.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.IO.Compression.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Claims.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.ValueTuple.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\vbc.exe
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\vbc.exe.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\vbc.rsp
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\BRL.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\EntityFramework.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\System.Data.SqlClient.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\BRL.pdb
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\BRL.dll.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\EntityFramework.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\System.Data.SqlClient.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\obj\Debug\UI.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\UI\obj\Debug\UI.pdb
+C:\Users\Daniel\Desktop\control gastos\UI\obj\Debug\UI.dll
+C:\Users\Daniel\Desktop\control gastos\UI\obj\Debug\UI.pdb
+C:\Users\Daniel\Desktop\control gastos\UI\bin\UI.dll.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\UI.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\UI.pdb
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csc.exe
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csc.exe.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csc.rsp
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csi.exe
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csi.exe.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\csi.rsp
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.AppContext.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Console.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.IO.Compression.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Claims.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.ValueTuple.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\vbc.exe
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\vbc.exe.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\vbc.rsp
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Daniel\Desktop\control gastos\UI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\BRL.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\EntityFramework.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\System.Data.SqlClient.dll
+C:\Users\Daniel\Desktop\control gastos\UI\bin\BRL.pdb
+C:\Users\Daniel\Desktop\control gastos\UI\bin\BRL.dll.config
+C:\Users\Daniel\Desktop\control gastos\UI\bin\EntityFramework.xml
+C:\Users\Daniel\Desktop\control gastos\UI\bin\EntityFramework.SqlServer.xml
+C:\Users\Daniel\Desktop\control gastos\UI\bin\System.Data.SqlClient.xml
+C:\Users\Daniel\Desktop\control gastos\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Daniel\Desktop\control gastos\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\control gastos\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\control gastos\UI\obj\Debug\UI.csproj.CopyComplete
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\UI.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\UI.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\UI.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csc.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csc.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csc.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csi.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csi.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\csi.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.AppContext.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Collections.Immutable.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Console.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.IO.Compression.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.IO.FileSystem.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.IO.Pipes.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Reflection.Metadata.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.AccessControl.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Claims.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.ValueTuple.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Xml.XPath.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\vbc.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\vbc.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\vbc.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\VBCSCompiler.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\roslyn\VBCSCompiler.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\EntityFramework.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\EntityFramework.SqlServer.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\System.Data.SqlClient.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\BRL.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\EntityFramework.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\EntityFramework.SqlServer.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\System.Data.SqlClient.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\obj\Debug\UI.csproj.CopyComplete
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\obj\Debug\UI.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\UI\obj\Debug\UI.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\UI.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\UI.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\UI.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csc.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csc.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csc.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csi.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csi.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\csi.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.AppContext.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Collections.Immutable.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Console.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.IO.Compression.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.IO.FileSystem.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.IO.Pipes.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Reflection.Metadata.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.AccessControl.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Claims.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Security.Principal.Windows.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.ValueTuple.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Xml.XPath.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\vbc.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\vbc.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\vbc.rsp
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\VBCSCompiler.exe
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\roslyn\VBCSCompiler.exe.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\EntityFramework.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\EntityFramework.SqlServer.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\System.Data.SqlClient.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\BRL.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\EntityFramework.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\EntityFramework.SqlServer.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\System.Data.SqlClient.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\obj\Debug\UI.csproj.CopyComplete
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\obj\Debug\UI.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\ControlGastosSolution\UI\obj\Debug\UI.pdb

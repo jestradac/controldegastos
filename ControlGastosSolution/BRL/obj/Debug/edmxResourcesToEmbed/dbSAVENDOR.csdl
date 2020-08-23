@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbSAVendorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbSAVendorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="dbSAVendorModel.Categoria" />
+    <EntitySet Name="Cliente" EntityType="dbSAVendorModel.Cliente" />
+    <EntitySet Name="Compra" EntityType="dbSAVendorModel.Compra" />
+    <EntitySet Name="DescuentoAplicable" EntityType="dbSAVendorModel.DescuentoAplicable" />
+    <EntitySet Name="DetalleCompra" EntityType="dbSAVendorModel.DetalleCompra" />
+    <EntitySet Name="Empresa" EntityType="dbSAVendorModel.Empresa" />
+    <EntitySet Name="empresaModalidadPago" EntityType="dbSAVendorModel.empresaModalidadPago" />
+    <EntitySet Name="Especialidad" EntityType="dbSAVendorModel.Especialidad" />
+    <EntitySet Name="EstadoCompra" EntityType="dbSAVendorModel.EstadoCompra" />
+    <EntitySet Name="ImagenProducto" EntityType="dbSAVendorModel.ImagenProducto" />
+    <EntitySet Name="Medida" EntityType="dbSAVendorModel.Medida" />
+    <EntitySet Name="ModalidadPago" EntityType="dbSAVendorModel.ModalidadPago" />
+    <EntitySet Name="ParametrosGenerales" EntityType="dbSAVendorModel.ParametrosGenerales" />
+    <EntitySet Name="Producto" EntityType="dbSAVendorModel.Producto" />
+    <EntitySet Name="ProductoCategoria" EntityType="dbSAVendorModel.ProductoCategoria" />
+    <EntitySet Name="ProductoTag" EntityType="dbSAVendorModel.ProductoTag" />
+    <EntitySet Name="Servicio" EntityType="dbSAVendorModel.Servicio" />
+    <EntitySet Name="ServicioEmpresa" EntityType="dbSAVendorModel.ServicioEmpresa" />
+    <EntitySet Name="Tag" EntityType="dbSAVendorModel.Tag" />
+    <EntitySet Name="TipoEmpresa" EntityType="dbSAVendorModel.TipoEmpresa" />
+    <EntitySet Name="TipoUsuario" EntityType="dbSAVendorModel.TipoUsuario" />
+    <EntitySet Name="Usuario" EntityType="dbSAVendorModel.Usuario" />
+    <AssociationSet Name="FK_Categoria_Empresa" Association="dbSAVendorModel.FK_Categoria_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Categoria" EntitySet="Categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoCategoria_Categoria" Association="dbSAVendorModel.FK_ProductoCategoria_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="ProductoCategoria" EntitySet="ProductoCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_Cliente" Association="dbSAVendorModel.FK_Compra_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idCom__7C4F7684" Association="dbSAVendorModel.FK__DetalleCo__idCom__7C4F7684">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_EstadoCompra" Association="dbSAVendorModel.FK_Compra_EstadoCompra">
+      <End Role="EstadoCompra" EntitySet="EstadoCompra" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compra_ModalidadPago" Association="dbSAVendorModel.FK_Compra_ModalidadPago">
+      <End Role="ModalidadPago" EntitySet="ModalidadPago" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DescuentoAplicable_Medida" Association="dbSAVendorModel.FK_DescuentoAplicable_Medida">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="DescuentoAplicable" EntitySet="DescuentoAplicable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idMed__7F2BE32F" Association="dbSAVendorModel.FK__DetalleCo__idMed__7F2BE32F">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idPro__7E37BEF6" Association="dbSAVendorModel.FK__DetalleCo__idPro__7E37BEF6">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empresaMo__idEmp__68487DD7" Association="dbSAVendorModel.FK__empresaMo__idEmp__68487DD7">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="empresaModalidadPago" EntitySet="empresaModalidadPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_TipoEmpresa" Association="dbSAVendorModel.FK_Empresa_TipoEmpresa">
+      <End Role="TipoEmpresa" EntitySet="TipoEmpresa" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Empresa" Association="dbSAVendorModel.FK_Producto_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioEmpresa_Empresa" Association="dbSAVendorModel.FK_ServicioEmpresa_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ServicioEmpresa" EntitySet="ServicioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Empresa" Association="dbSAVendorModel.FK_Usuario_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empresaMo__idMod__693CA210" Association="dbSAVendorModel.FK__empresaMo__idMod__693CA210">
+      <End Role="ModalidadPago" EntitySet="ModalidadPago" />
+      <End Role="empresaModalidadPago" EntitySet="empresaModalidadPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImagenProducto_Producto" Association="dbSAVendorModel.FK_ImagenProducto_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ImagenProducto" EntitySet="ImagenProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductoT__idPro__71D1E811" Association="dbSAVendorModel.FK__ProductoT__idPro__71D1E811">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductoTag" EntitySet="ProductoTag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductoCategoria_Producto" Association="dbSAVendorModel.FK_ProductoCategoria_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductoCategoria" EntitySet="ProductoCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductoT__idtag__70DDC3D8" Association="dbSAVendorModel.FK__ProductoT__idtag__70DDC3D8">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="ProductoTag" EntitySet="ProductoTag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioEmpresa_Servicio" Association="dbSAVendorModel.FK_ServicioEmpresa_Servicio">
+      <End Role="Servicio" EntitySet="Servicio" />
+      <End Role="ServicioEmpresa" EntitySet="ServicioEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_TipoUsuario" Association="dbSAVendorModel.FK_Usuario_TipoUsuario">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="EspecialidadEmpresa" Association="dbSAVendorModel.EspecialidadEmpresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Especialidad" EntitySet="Especialidad" />
+    </AssociationSet>
+    <EntitySet Name="ListaPrecio" EntityType="dbSAVendorModel.ListaPrecio" />
+    <AssociationSet Name="FK_ListaPrecio_DescuentoAplicable" Association="dbSAVendorModel.FK_ListaPrecio_DescuentoAplicable">
+      <End Role="DescuentoAplicable" EntitySet="DescuentoAplicable" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__idLis__7D439ABD" Association="dbSAVendorModel.FK__DetalleCo__idLis__7D439ABD">
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecio_Medida" Association="dbSAVendorModel.FK_ListaPrecio_Medida">
+      <End Role="Medida" EntitySet="Medida" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecio_Producto" Association="dbSAVendorModel.FK_ListaPrecio_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ListaPrecio" EntitySet="ListaPrecio" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="nivel" Type="Int32" Nullable="false" />
+    <Property Name="color" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK_Categoria_Empresa" FromRole="Categoria" ToRole="Empresa" />
+    <NavigationProperty Name="ProductoCategoria" Relationship="dbSAVendorModel.FK_ProductoCategoria_Categoria" FromRole="Categoria" ToRole="ProductoCategoria" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Compra" Relationship="dbSAVendorModel.FK_Compra_Cliente" FromRole="Cliente" ToRole="Compra" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="idCompra" />
+    </Key>
+    <Property Name="idCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <Property Name="idEstadoCompra" Type="Int32" Nullable="false" />
+    <Property Name="idModalidadPago" Type="Int32" Nullable="false" />
+    <Property Name="codigoTransaccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="dbSAVendorModel.FK_Compra_Cliente" FromRole="Compra" ToRole="Cliente" />
+    <NavigationProperty Name="DetalleCompra" Relationship="dbSAVendorModel.FK__DetalleCo__idCom__7C4F7684" FromRole="Compra" ToRole="DetalleCompra" />
+    <NavigationProperty Name="EstadoCompra" Relationship="dbSAVendorModel.FK_Compra_EstadoCompra" FromRole="Compra" ToRole="EstadoCompra" />
+    <NavigationProperty Name="ModalidadPago" Relationship="dbSAVendorModel.FK_Compra_ModalidadPago" FromRole="Compra" ToRole="ModalidadPago" />
+  </EntityType>
+  <EntityType Name="DescuentoAplicable">
+    <Key>
+      <PropertyRef Name="idDescuentoAplicable" />
+    </Key>
+    <Property Name="idDescuentoAplicable" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMedida" Type="Int32" Nullable="false" />
+    <Property Name="decuento" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Medida" Relationship="dbSAVendorModel.FK_DescuentoAplicable_Medida" FromRole="DescuentoAplicable" ToRole="Medida" />
+    <NavigationProperty Name="ListaPrecio" Relationship="dbSAVendorModel.FK_ListaPrecio_DescuentoAplicable" FromRole="DescuentoAplicable" ToRole="ListaPrecio" />
+  </EntityType>
+  <EntityType Name="DetalleCompra">
+    <Key>
+      <PropertyRef Name="idDetalleCompra" />
+    </Key>
+    <Property Name="idDetalleCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idCompra" Type="Int32" />
+    <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="idMedida" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="fechaSeleccion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="eliminado" Type="Boolean" />
+    <NavigationProperty Name="Compra" Relationship="dbSAVendorModel.FK__DetalleCo__idCom__7C4F7684" FromRole="DetalleCompra" ToRole="Compra" />
+    <NavigationProperty Name="Medida" Relationship="dbSAVendorModel.FK__DetalleCo__idMed__7F2BE32F" FromRole="DetalleCompra" ToRole="Medida" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK__DetalleCo__idPro__7E37BEF6" FromRole="DetalleCompra" ToRole="Producto" />
+    <NavigationProperty Name="ListaPrecio" Relationship="dbSAVendorModel.FK__DetalleCo__idLis__7D439ABD" FromRole="DetalleCompra" ToRole="ListaPrecio" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idTipoEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="logo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="responsable" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="urlMain" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="urlFb" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="urlIg" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="urlTt" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="telefonoWa" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="colorPagina" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="razonSocial" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="nit" Type="Int64" Nullable="false" />
+    <Property Name="LatLong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="urlImgEncargado" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="urlImgUbicacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="urlImgCI" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="urlImgFactura" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="urlImgNIT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="habilitado" Type="Boolean" Nullable="false" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="dbSAVendorModel.FK_Categoria_Empresa" FromRole="Empresa" ToRole="Categoria" />
+    <NavigationProperty Name="empresaModalidadPago" Relationship="dbSAVendorModel.FK__empresaMo__idEmp__68487DD7" FromRole="Empresa" ToRole="empresaModalidadPago" />
+    <NavigationProperty Name="TipoEmpresa" Relationship="dbSAVendorModel.FK_Empresa_TipoEmpresa" FromRole="Empresa" ToRole="TipoEmpresa" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK_Producto_Empresa" FromRole="Empresa" ToRole="Producto" />
+    <NavigationProperty Name="ServicioEmpresa" Relationship="dbSAVendorModel.FK_ServicioEmpresa_Empresa" FromRole="Empresa" ToRole="ServicioEmpresa" />
+    <NavigationProperty Name="Usuario" Relationship="dbSAVendorModel.FK_Usuario_Empresa" FromRole="Empresa" ToRole="Usuario" />
+    <NavigationProperty Name="Especialidad" Relationship="dbSAVendorModel.EspecialidadEmpresa" FromRole="Empresa" ToRole="Especialidad" />
+  </EntityType>
+  <EntityType Name="empresaModalidadPago">
+    <Key>
+      <PropertyRef Name="idEmpresaModalidadPago" />
+    </Key>
+    <Property Name="idEmpresaModalidadPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idModalidadPago" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK__empresaMo__idEmp__68487DD7" FromRole="empresaModalidadPago" ToRole="Empresa" />
+    <NavigationProperty Name="ModalidadPago" Relationship="dbSAVendorModel.FK__empresaMo__idMod__693CA210" FromRole="empresaModalidadPago" ToRole="ModalidadPago" />
+  </EntityType>
+  <EntityType Name="Especialidad">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.EspecialidadEmpresa" FromRole="Especialidad" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="EstadoCompra">
+    <Key>
+      <PropertyRef Name="idEstadoCompra" />
+    </Key>
+    <Property Name="idEstadoCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Compra" Relationship="dbSAVendorModel.FK_Compra_EstadoCompra" FromRole="EstadoCompra" ToRole="Compra" />
+  </EntityType>
+  <EntityType Name="ImagenProducto">
+    <Key>
+      <PropertyRef Name="idImagenProducto" />
+    </Key>
+    <Property Name="idImagenProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="urlImagen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="titulo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="esPrincipal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK_ImagenProducto_Producto" FromRole="ImagenProducto" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Medida">
+    <Key>
+      <PropertyRef Name="idMedida" />
+    </Key>
+    <Property Name="idMedida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="abreviatura" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DescuentoAplicable" Relationship="dbSAVendorModel.FK_DescuentoAplicable_Medida" FromRole="Medida" ToRole="DescuentoAplicable" />
+    <NavigationProperty Name="DetalleCompra" Relationship="dbSAVendorModel.FK__DetalleCo__idMed__7F2BE32F" FromRole="Medida" ToRole="DetalleCompra" />
+    <NavigationProperty Name="ListaPrecio" Relationship="dbSAVendorModel.FK_ListaPrecio_Medida" FromRole="Medida" ToRole="ListaPrecio" />
+  </EntityType>
+  <EntityType Name="ModalidadPago">
+    <Key>
+      <PropertyRef Name="idModalidadPago" />
+    </Key>
+    <Property Name="idModalidadPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Compra" Relationship="dbSAVendorModel.FK_Compra_ModalidadPago" FromRole="ModalidadPago" ToRole="Compra" />
+    <NavigationProperty Name="empresaModalidadPago" Relationship="dbSAVendorModel.FK__empresaMo__idMod__693CA210" FromRole="ModalidadPago" ToRole="empresaModalidadPago" />
+  </EntityType>
+  <EntityType Name="ParametrosGenerales">
+    <Key>
+      <PropertyRef Name="idParametrosGenerales" />
+    </Key>
+    <Property Name="idParametrosGenerales" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="detalle" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionEnvio" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DetalleCompra" Relationship="dbSAVendorModel.FK__DetalleCo__idPro__7E37BEF6" FromRole="Producto" ToRole="DetalleCompra" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK_Producto_Empresa" FromRole="Producto" ToRole="Empresa" />
+    <NavigationProperty Name="ImagenProducto" Relationship="dbSAVendorModel.FK_ImagenProducto_Producto" FromRole="Producto" ToRole="ImagenProducto" />
+    <NavigationProperty Name="ProductoTag" Relationship="dbSAVendorModel.FK__ProductoT__idPro__71D1E811" FromRole="Producto" ToRole="ProductoTag" />
+    <NavigationProperty Name="ProductoCategoria" Relationship="dbSAVendorModel.FK_ProductoCategoria_Producto" FromRole="Producto" ToRole="ProductoCategoria" />
+    <NavigationProperty Name="ListaPrecio" Relationship="dbSAVendorModel.FK_ListaPrecio_Producto" FromRole="Producto" ToRole="ListaPrecio" />
+  </EntityType>
+  <EntityType Name="ProductoCategoria">
+    <Key>
+      <PropertyRef Name="idProductoCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="idProductoCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Categoria" Relationship="dbSAVendorModel.FK_ProductoCategoria_Categoria" FromRole="ProductoCategoria" ToRole="Categoria" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK_ProductoCategoria_Producto" FromRole="ProductoCategoria" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="ProductoTag">
+    <Key>
+      <PropertyRef Name="idProductoTag" />
+    </Key>
+    <Property Name="idProductoTag" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idtag" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK__ProductoT__idPro__71D1E811" FromRole="ProductoTag" ToRole="Producto" />
+    <NavigationProperty Name="Tag" Relationship="dbSAVendorModel.FK__ProductoT__idtag__70DDC3D8" FromRole="ProductoTag" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="idServicio" />
+    </Key>
+    <Property Name="idServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="precioMensual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="porcentajeTransaccional" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ServicioEmpresa" Relationship="dbSAVendorModel.FK_ServicioEmpresa_Servicio" FromRole="Servicio" ToRole="ServicioEmpresa" />
+  </EntityType>
+  <EntityType Name="ServicioEmpresa">
+    <Key>
+      <PropertyRef Name="idServicioEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idServicio" Type="Int32" Nullable="false" />
+    <Property Name="idServicioEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK_ServicioEmpresa_Empresa" FromRole="ServicioEmpresa" ToRole="Empresa" />
+    <NavigationProperty Name="Servicio" Relationship="dbSAVendorModel.FK_ServicioEmpresa_Servicio" FromRole="ServicioEmpresa" ToRole="Servicio" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="idtag" />
+    </Key>
+    <Property Name="idtag" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductoTag" Relationship="dbSAVendorModel.FK__ProductoT__idtag__70DDC3D8" FromRole="Tag" ToRole="ProductoTag" />
+  </EntityType>
+  <EntityType Name="TipoEmpresa">
+    <Key>
+      <PropertyRef Name="idTipoEmpresa" />
+    </Key>
+    <Property Name="idTipoEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK_Empresa_TipoEmpresa" FromRole="TipoEmpresa" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="idTipoUsuario" />
+    </Key>
+    <Property Name="idTipoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="dbSAVendorModel.FK_Usuario_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idTipoUsuario" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="esPrincipal" Type="Boolean" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="dbSAVendorModel.FK_Usuario_Empresa" FromRole="Usuario" ToRole="Empresa" />
+    <NavigationProperty Name="TipoUsuario" Relationship="dbSAVendorModel.FK_Usuario_TipoUsuario" FromRole="Usuario" ToRole="TipoUsuario" />
+  </EntityType>
+  <Association Name="FK_Categoria_Empresa">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Categoria" Role="Categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Categoria">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductoCategoria_Categoria">
+    <End Type="dbSAVendorModel.Categoria" Role="Categoria" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ProductoCategoria" Role="ProductoCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="ProductoCategoria">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_Cliente">
+    <End Type="dbSAVendorModel.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Compra" Role="Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idCom__7C4F7684">
+    <End Type="dbSAVendorModel.Compra" Role="Compra" Multiplicity="0..1" />
+    <End Type="dbSAVendorModel.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="idCompra" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_EstadoCompra">
+    <End Type="dbSAVendorModel.EstadoCompra" Role="EstadoCompra" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Compra" Role="Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoCompra">
+        <PropertyRef Name="idEstadoCompra" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEstadoCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compra_ModalidadPago">
+    <End Type="dbSAVendorModel.ModalidadPago" Role="ModalidadPago" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Compra" Role="Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idModalidadPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DescuentoAplicable_Medida">
+    <End Type="dbSAVendorModel.Medida" Role="Medida" Multiplicity="1" />
+    <End Type="dbSAVendorModel.DescuentoAplicable" Role="DescuentoAplicable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="DescuentoAplicable">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idMed__7F2BE32F">
+    <End Type="dbSAVendorModel.Medida" Role="Medida" Multiplicity="1" />
+    <End Type="dbSAVendorModel.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idPro__7E37BEF6">
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="dbSAVendorModel.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empresaMo__idEmp__68487DD7">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.empresaModalidadPago" Role="empresaModalidadPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="empresaModalidadPago">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_TipoEmpresa">
+    <End Type="dbSAVendorModel.TipoEmpresa" Role="TipoEmpresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEmpresa">
+        <PropertyRef Name="idTipoEmpresa" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="idTipoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Empresa">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioEmpresa_Empresa">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ServicioEmpresa" Role="ServicioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="ServicioEmpresa">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Empresa">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empresaMo__idMod__693CA210">
+    <End Type="dbSAVendorModel.ModalidadPago" Role="ModalidadPago" Multiplicity="1" />
+    <End Type="dbSAVendorModel.empresaModalidadPago" Role="empresaModalidadPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Principal>
+      <Dependent Role="empresaModalidadPago">
+        <PropertyRef Name="idModalidadPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImagenProducto_Producto">
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ImagenProducto" Role="ImagenProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ImagenProducto">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductoT__idPro__71D1E811">
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ProductoTag" Role="ProductoTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ProductoTag">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductoCategoria_Producto">
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ProductoCategoria" Role="ProductoCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ProductoCategoria">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductoT__idtag__70DDC3D8">
+    <End Type="dbSAVendorModel.Tag" Role="Tag" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ProductoTag" Role="ProductoTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="idtag" />
+      </Principal>
+      <Dependent Role="ProductoTag">
+        <PropertyRef Name="idtag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioEmpresa_Servicio">
+    <End Type="dbSAVendorModel.Servicio" Role="Servicio" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ServicioEmpresa" Role="ServicioEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio">
+        <PropertyRef Name="idServicio" />
+      </Principal>
+      <Dependent Role="ServicioEmpresa">
+        <PropertyRef Name="idServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_TipoUsuario">
+    <End Type="dbSAVendorModel.TipoUsuario" Role="TipoUsuario" Multiplicity="1" />
+    <End Type="dbSAVendorModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EspecialidadEmpresa">
+    <End Type="dbSAVendorModel.Empresa" Role="Empresa" Multiplicity="*" />
+    <End Type="dbSAVendorModel.Especialidad" Role="Especialidad" Multiplicity="*" />
+  </Association>
+  <EntityType Name="ListaPrecio">
+    <Key>
+      <PropertyRef Name="idListaPrecio" />
+    </Key>
+    <Property Name="idListaPrecio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="idDescuentoAplicable" Type="Int32" Nullable="false" />
+    <Property Name="idMedida" Type="Int32" Nullable="false" />
+    <Property Name="Codigo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="stock" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="esDestacado" Type="Boolean" Nullable="false" />
+    <Property Name="nivel" Type="Int32" Nullable="false" />
+    <Property Name="eliminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DescuentoAplicable" Relationship="dbSAVendorModel.FK_ListaPrecio_DescuentoAplicable" FromRole="ListaPrecio" ToRole="DescuentoAplicable" />
+    <NavigationProperty Name="DetalleCompra" Relationship="dbSAVendorModel.FK__DetalleCo__idLis__7D439ABD" FromRole="ListaPrecio" ToRole="DetalleCompra" />
+    <NavigationProperty Name="Medida" Relationship="dbSAVendorModel.FK_ListaPrecio_Medida" FromRole="ListaPrecio" ToRole="Medida" />
+    <NavigationProperty Name="Producto" Relationship="dbSAVendorModel.FK_ListaPrecio_Producto" FromRole="ListaPrecio" ToRole="Producto" />
+  </EntityType>
+  <Association Name="FK_ListaPrecio_DescuentoAplicable">
+    <End Type="dbSAVendorModel.DescuentoAplicable" Role="DescuentoAplicable" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ListaPrecio" Role="ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DescuentoAplicable">
+        <PropertyRef Name="idDescuentoAplicable" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idDescuentoAplicable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__idLis__7D439ABD">
+    <End Type="dbSAVendorModel.ListaPrecio" Role="ListaPrecio" Multiplicity="1" />
+    <End Type="dbSAVendorModel.DetalleCompra" Role="DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecio">
+        <PropertyRef Name="idListaPrecio" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="idListaPrecio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecio_Medida">
+    <End Type="dbSAVendorModel.Medida" Role="Medida" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ListaPrecio" Role="ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medida">
+        <PropertyRef Name="idMedida" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecio_Producto">
+    <End Type="dbSAVendorModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="dbSAVendorModel.ListaPrecio" Role="ListaPrecio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="ListaPrecio">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

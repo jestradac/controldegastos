@@ -1,0 +1,62 @@
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\BRL.dll.config
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\BRL.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\BRL.pdb
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\EntityFramework.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\EntityFramework.xml
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.xml
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\obj\Debug\BRL.csprojAssemblyReference.cache
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\obj\Debug\BRL.csproj.CopyComplete
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\obj\Debug\BRL.dll
+D:\APPS\SAVENDOR\BRL\SAVENDOR\BRL\obj\Debug\BRL.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\BRL.dll.config
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\BRL.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\BRL.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\EntityFramework.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\EntityFramework.xml
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\obj\Debug\BRL.csprojAssemblyReference.cache
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\obj\Debug\BRL.csproj.CopyComplete
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\obj\Debug\BRL.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\obj\Debug\BRL.pdb
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Daniel Lobo\Downloads\SAVENDOR\SAVENDOR\BRL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\BRL.dll.config
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\BRL.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\BRL.pdb
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\EntityFramework.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\EntityFramework.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\obj\Debug\BRL.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\obj\Debug\BRL.csproj.CopyComplete
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\obj\Debug\BRL.dll
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\obj\Debug\BRL.pdb
+C:\Users\Daniel\Documents\desarrollo\SAVENDOR\BRL\obj\Debug\BRL.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\BRL.dll.config
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\BRL.dll
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\BRL.pdb
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Daniel\Desktop\control gastos\BRL\obj\Debug\BRL.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\control gastos\BRL\obj\Debug\BRL.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\control gastos\BRL\obj\Debug\BRL.csproj.CopyComplete
+C:\Users\Daniel\Desktop\control gastos\BRL\obj\Debug\BRL.dll
+C:\Users\Daniel\Desktop\control gastos\BRL\obj\Debug\BRL.pdb
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\EntityFramework.dll
+C:\Users\Daniel\Desktop\control gastos\BRL\bin\Debug\System.Data.SqlClient.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\BRL.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\EntityFramework.SqlServer.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\EntityFramework.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\System.Data.SqlClient.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\bin\Debug\System.Data.SqlClient.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.csprojAssemblyReference.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.csproj.CoreCompileInputs.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.csproj.CopyComplete
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.pdb
