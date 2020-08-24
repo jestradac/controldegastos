@@ -109,11 +109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\ControlGastosSolution\\BRL\\BRL.csproj",
+      "projectUniqueName": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\controldegastos\\ControlGastosSolution\\BRL\\BRL.csproj",
       "projectName": "BRL",
-      "projectPath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\ControlGastosSolution\\BRL\\BRL.csproj",
+      "projectPath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\controldegastos\\ControlGastosSolution\\BRL\\BRL.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\ControlGastosSolution\\BRL\\obj\\",
+      "outputPath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\controldegastos\\ControlGastosSolution\\BRL\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

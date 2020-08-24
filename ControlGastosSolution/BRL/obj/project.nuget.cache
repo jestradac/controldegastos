@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zKg78TLOFb/SBVmyHqpxczPhxFSQNx47+uX1Fia8T3BJk0ixyQ+xKEhGI17qTZSKpAZzw0j2gVJZEcYW7ngnbw==",
+  "dgSpecHash": "Xy7pYN5BPwnVLyiXbxsPNTnu2x5x1B1WjG+F6nz1w1Tsp94nF8kHQmMOzHFFgzB/YTzgqzcbWrqUcortRYbvog==",
   "success": true,
-  "projectFilePath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\ControlGastosSolution\\BRL\\BRL.csproj",
+  "projectFilePath": "D:\\NUR\\2020-2\\INGENIERÍA DE SOFTWARE III\\RepositorioGit\\controldegastos\\ControlGastosSolution\\BRL\\BRL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
   ],

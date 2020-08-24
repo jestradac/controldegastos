@@ -35,7 +35,7 @@ namespace UI
             }
             else
             {
-                Response.Redirect("Principal.aspx", true);
+                Response.Redirect("Administracion.aspx", true);
             }
         }
         protected void btnLogIn_Click(object sender, EventArgs e)
