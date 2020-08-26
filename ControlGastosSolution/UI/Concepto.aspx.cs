@@ -24,6 +24,7 @@ namespace UI
                 BRL.tbl_Concepto objConcepto = new BRL.tbl_Concepto();
                 objConcepto = objConcepto.traertbl_Concepto(int.Parse(Request["id"]));
                 this.txbNombre.Text = objConcepto.nombre.Trim();
+                this.ddlTipoTransaccion.Enabled = false;
                 if (objConcepto.tipoTransaccion.Equals(false))
                 {
                     ddlTipoTransaccion.SelectedValue = "Ingreso";
@@ -32,6 +33,10 @@ namespace UI
                 {
                     ddlTipoTransaccion.SelectedValue = "Egreso";
                 }
+            }
+            else
+            {
+                this.ddlTipoTransaccion.Enabled = true;
             }
         }
         private void guardar()
@@ -44,6 +49,7 @@ namespace UI
             if (esEditar)
             {
                 objConcepto = objConcepto.traertbl_Concepto(int.Parse(Request["id"]));
+                ddlTipoTransaccion.Enabled = false;
             }
 
             objConcepto.nombre = this.txbNombre.Text.Trim();

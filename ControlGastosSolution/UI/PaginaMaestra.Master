@@ -74,11 +74,11 @@
             <div class="main-menu-content">
                 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-                    <li class=" nav-item"><a href="email-application.html"><i class="icon-wallet"></i><span class="menu-title" data-i18n="nav.email-application.main">Cuentas/Monederos</span></a>
+                    <li class=" nav-item"><a href="ListadoCuenta.aspx"><i class="icon-wallet"></i><span class="menu-title" data-i18n="nav.email-application.main">Cuentas/Monederos</span></a>
                     </li>
-                    <li class=" nav-item"><a href="chat-application.html"><i class="ft-list"></i><span class="menu-title" data-i18n="nav.chat-application.main">Conceptos</span></a>
+                    <li class=" nav-item"><a href="ListadoConcepto.aspx"><i class="ft-list"></i><span class="menu-title" data-i18n="nav.chat-application.main">Conceptos</span></a>
                     </li>
-                    <li class=" nav-item"><a href="scrumboard.html"><i class="ft-repeat"></i><span class="menu-title" data-i18n="nav.scrumboard.main">Movimientos</span></a>
+                    <li class=" nav-item"><a href="ListadoTransacciones.aspx"><i class="ft-repeat"></i><span class="menu-title" data-i18n="nav.scrumboard.main">Movimientos</span></a>
                     </li>
                 </ul>
             </div>
@@ -124,6 +124,9 @@
     <!-- END ROBUST JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+    <!-- END PAGE LEVEL JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>
     <!-- END PAGE LEVEL JS-->
 </body>
 </html>

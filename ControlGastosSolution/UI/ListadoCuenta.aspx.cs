@@ -31,6 +31,9 @@ namespace UI
                 Label lblNombre = (Label)e.Row.FindControl("lblNombre");
                 lblNombre.Text = objCuenta.nombre.Trim();
 
+                Label lblFechaCreacion = (Label)e.Row.FindControl("lblFechaCreacion");
+                lblFechaCreacion.Text = objCuenta.fechaCreacion.ToString().Trim();
+
                 HyperLink hlEditar = (HyperLink)e.Row.FindControl("hlEditar");
                 hlEditar.NavigateUrl = "Cuenta.aspx?id=" + objCuenta.idCuenta.ToString();
 
