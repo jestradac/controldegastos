@@ -7,7 +7,7 @@ namespace BRL
     public partial class tbl_Cuenta
     {
         //Entidades
-        BRL.db_ControlGastosEntities1 objEntidad = new db_ControlGastosEntities1();
+        BRL.db_ControlGastosEntities objEntidad = new db_ControlGastosEntities();
 
         /// <summary>
         /// Guardar
@@ -32,10 +32,11 @@ namespace BRL
         /// Listar tbl_Cuentas
         /// </summary>
         /// <returns></returns>
-        public List<BRL.tbl_Cuenta> listartbl_Cuentas()
+        public List<BRL.tbl_Cuenta> listartbl_Cuentas(int auxUsuario)
         {
             return (from C in DatosComun.dbContexto.tbl_Cuenta
                     where C.eliminado.Equals(false)
+                    && C.idUsuario.Equals(auxUsuario)
                     orderby C.nombre ascending
                     select C).ToList();
         }
@@ -56,17 +57,33 @@ namespace BRL
         /// </summary>
         /// <param name="auxNombre"></param>
         /// <returns></returns>
-        public bool existeNombre(String auxNombre)
+        public bool existeNombre(String auxNombre, int auxUsuario)
         {
             try
             {
                 return (from C in BRL.DatosComun.dbContexto.tbl_Cuenta
                         where C.nombre.ToLower().Trim().Equals(auxNombre.ToLower().Trim())
+                        && C.idUsuario.Equals(auxUsuario)
                         select C).Count() > 0;
             }
             catch
             {
                 return false;
+            }
+        }
+        public decimal verSaldo(int auxSaldo)
+        {
+            try
+            {
+                return
+                        (from C in BRL.DatosComun.dbContexto.tbl_Transaccion
+                        where C.idCuenta.Equals(auxSaldo)
+                        select C.monto
+                        ).Sum();
+            }
+            catch
+            {
+                return -1;
             }
         }
     }

@@ -8,12 +8,12 @@ namespace BRL
         /// <summary>
         /// Variable Global del Contexto
         /// </summary>
-        public static BRL.db_ControlGastosEntities1 _dbContexto = new BRL.db_ControlGastosEntities1();
+        public static BRL.db_ControlGastosEntities _dbContexto = new BRL.db_ControlGastosEntities();
 
         /// <summary>
         /// Contexto SAFE! >> Generado por Daniel Lobo
         /// </summary>
-        public static BRL.db_ControlGastosEntities1 dbContexto
+        public static BRL.db_ControlGastosEntities dbContexto
         {
             get
             {
@@ -24,11 +24,11 @@ namespace BRL
                 if (!HttpContext.Current.Items.Contains(cContexto))
                 {
                     //Agrega una nueva Instancia
-                    HttpContext.Current.Items.Add(cContexto, new BRL.db_ControlGastosEntities1());
+                    HttpContext.Current.Items.Add(cContexto, new BRL.db_ControlGastosEntities());
                 }
 
                 //Devuelve la Instancia
-                return (BRL.db_ControlGastosEntities1)HttpContext.Current.Items[cContexto];
+                return (BRL.db_ControlGastosEntities)HttpContext.Current.Items[cContexto];
             }
         }
 

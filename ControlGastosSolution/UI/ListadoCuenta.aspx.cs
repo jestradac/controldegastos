@@ -18,8 +18,21 @@ namespace UI
         }
         private void cargarDatos()
         {
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+            else
+            {
+                objUsuario = (BRL.tbl_Usuario)Session["usuario"];
+                Label lblUsuario = (Label)Master.FindControl("lblUsuario");
+                lblUsuario.Text = objUsuario.nombreCompleto;
+            }
+
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
-            this.gvCuenta.DataSource = objCuenta.listartbl_Cuentas();
+            this.gvCuenta.DataSource = objCuenta.listartbl_Cuentas(objUsuario.idUsuario);
             this.gvCuenta.DataBind();
         }
         protected void gvCuenta_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -33,6 +46,9 @@ namespace UI
 
                 Label lblFechaCreacion = (Label)e.Row.FindControl("lblFechaCreacion");
                 lblFechaCreacion.Text = objCuenta.fechaCreacion.ToString().Trim();
+
+                Label lblSaldo = (Label)e.Row.FindControl("lblSaldo");
+                lblSaldo.Text = "FALTA";
 
                 HyperLink hlEditar = (HyperLink)e.Row.FindControl("hlEditar");
                 hlEditar.NavigateUrl = "Cuenta.aspx?id=" + objCuenta.idCuenta.ToString();
@@ -68,7 +84,11 @@ namespace UI
         {
             try
             {
-                this.gvCuenta.HeaderRow.TableSection = TableRowSection.TableHeader;
+                if (gvCuenta.Rows.Count > 0)
+                {
+                    this.gvCuenta.HeaderRow.TableSection = TableRowSection.TableHeader;
+                }
+                
             }
             catch { }
         }

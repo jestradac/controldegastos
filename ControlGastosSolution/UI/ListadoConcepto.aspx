@@ -14,12 +14,64 @@
     </div>
 
     <div>
+        <section id="configuration1">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Listado de Conceptos de Ingresos</h4>
+                            <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                            <div class="heading-elements">
+                                <ul class="list-inline mb-0">
+                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-content collapse show">
+                            <div class="card-body card-dashboard">
+                                <asp:GridView ID="gvConceptoI" CssClass="table table-striped table-bordered zero-configuration" runat="server" AutoGenerateColumns="false"
+                                    GridLines="None" Width="100%" EmptyDataText="- No hay datos -"
+                                    OnPageIndexChanging="gvConceptoI_PageIndexChanging"
+                                    OnDataBound="gvConceptoI_DataBound" OnRowDataBound="gvConceptoI_RowDataBound" AllowPaging="True" PageSize="20">
+                                    <AlternatingRowStyle BackColor="#F0F0F0" Font-Overline="False" Wrap="True" />
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Opciones">
+                                            <ItemTemplate>
+                                                <asp:HyperLink ID="hlEditar" runat="server"><i class="ft-edit"></i></asp:HyperLink>
+                                                &nbsp;<asp:LinkButton ID="lbEliminar" runat="server" OnClick="lbEliminar_Click"><i class="ft-trash-2"></i></asp:LinkButton>
+                                            </ItemTemplate>
+                                            <ItemStyle Width="60px" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Nombre">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblNombreI" runat="server" Text="lblNombreI"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Tipo de Transacción">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblTipoTransaccionI" runat="server" Text="lblTipoTransaccionI"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <HeaderStyle BackColor="Silver" HorizontalAlign="Left" />
+                                </asp:GridView>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div>
         <section id="configuration">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Listado de Conceptos</h4>
+                            <h4 class="card-title">Listado de Conceptos de Egresos</h4>
                             <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
                             <div class="heading-elements">
                                 <ul class="list-inline mb-0">

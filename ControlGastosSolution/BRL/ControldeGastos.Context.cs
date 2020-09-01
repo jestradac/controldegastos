@@ -13,10 +13,10 @@ namespace BRL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_ControlGastosEntities1 : DbContext
+    public partial class db_ControlGastosEntities : DbContext
     {
-        public db_ControlGastosEntities1()
-            : base("name=db_ControlGastosEntities1")
+        public db_ControlGastosEntities()
+            : base("name=db_ControlGastosEntities")
         {
         }
     
@@ -27,7 +27,7 @@ namespace BRL
     
         public virtual DbSet<tbl_Concepto> tbl_Concepto { get; set; }
         public virtual DbSet<tbl_Cuenta> tbl_Cuenta { get; set; }
-        public virtual DbSet<tbl_Transaccion> tbl_Transaccion { get; set; }
         public virtual DbSet<tbl_Usuario> tbl_Usuario { get; set; }
+        public virtual DbSet<tbl_Transaccion> tbl_Transaccion { get; set; }
     }
 }

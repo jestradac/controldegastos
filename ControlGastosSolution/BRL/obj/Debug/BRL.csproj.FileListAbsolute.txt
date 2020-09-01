@@ -60,3 +60,15 @@ D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.csproj.CopyComplete
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.dll
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\Repositorio\ControlGastosSolution\BRL\obj\Debug\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\BRL.dll.config
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\EntityFramework.SqlServer.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\EntityFramework.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\System.Data.SqlClient.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\bin\Debug\System.Data.SqlClient.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\obj\Debug\BRL.csproj.CoreCompileInputs.cache
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\obj\Debug\BRL.csproj.CopyComplete
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\obj\Debug\BRL.dll
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\obj\Debug\BRL.pdb
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\BRL\obj\Debug\BRL.csprojAssemblyReference.cache

@@ -7,7 +7,7 @@ namespace BRL
     public partial class tbl_Concepto
     {
         //Entidades
-        BRL.db_ControlGastosEntities1 objEntidad = new db_ControlGastosEntities1();
+        BRL.db_ControlGastosEntities objEntidad = new db_ControlGastosEntities();
 
         /// <summary>
         /// Guardar
@@ -32,10 +32,14 @@ namespace BRL
         /// Listar tbl_Conceptos
         /// </summary>
         /// <returns></returns>
-        public List<BRL.tbl_Concepto> listartbl_Conceptos()
+        public List<BRL.tbl_Concepto> listartbl_Conceptos(int idUsuario, bool esEgreso)
         {
             return (from C in DatosComun.dbContexto.tbl_Concepto
                     where C.eliminado.Equals(false)
+                    && C.idUsuario.Equals(idUsuario)
+                    // 1 y 2 son Traspaso
+                    && (C.idConcepto > 2)
+                    && C.tipoTransaccion.Equals(esEgreso)
                     orderby C.nombre ascending
                     select C).ToList();
         }

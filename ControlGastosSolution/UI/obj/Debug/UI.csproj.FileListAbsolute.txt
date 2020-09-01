@@ -442,8 +442,8 @@ D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\Control
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\bin\EntityFramework.SqlServer.xml
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\bin\System.Data.SqlClient.xml
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.csprojAssemblyReference.cache
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.csproj.CopyComplete
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.dll
 D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.pdb
-D:\NUR\2020-2\INGENIERÍA DE SOFTWARE III\RepositorioGit\controldegastos\ControlGastosSolution\UI\obj\Debug\UI.csprojAssemblyReference.cache

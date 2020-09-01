@@ -7,7 +7,7 @@ namespace BRL
     public partial class tbl_Usuario
     {
         //Entidades
-        BRL.db_ControlGastosEntities1 objEntidad = new db_ControlGastosEntities1();
+        BRL.db_ControlGastosEntities objEntidad = new db_ControlGastosEntities();
 
         /// <summary>
         /// Guardar

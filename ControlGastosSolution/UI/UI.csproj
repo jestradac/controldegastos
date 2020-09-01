@@ -5538,6 +5538,7 @@
     <Content Include="images\login\tick.png" />
     <Content Include="ListadoConcepto.aspx" />
     <Content Include="ListadoCuenta.aspx" />
+    <Content Include="ListadoTransacciones.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -7171,6 +7172,13 @@
     </Compile>
     <Compile Include="ListadoCuenta.aspx.designer.cs">
       <DependentUpon>ListadoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoTransacciones.aspx.cs">
+      <DependentUpon>ListadoTransacciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoTransacciones.aspx.designer.cs">
+      <DependentUpon>ListadoTransacciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_ControlGastosModelStoreContainer" CdmEntityContainer="db_ControlGastosEntities">
+    <EntitySetMapping Name="tbl_Concepto">
+      <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Concepto">
+        <MappingFragment StoreEntitySet="tbl_Concepto">
+          <ScalarProperty Name="idConcepto" ColumnName="idConcepto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="tipoTransaccion" ColumnName="tipoTransaccion" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Cuenta">
+      <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Cuenta">
+        <MappingFragment StoreEntitySet="tbl_Cuenta">
+          <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Usuario">
+      <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Usuario">
+        <MappingFragment StoreEntitySet="tbl_Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Transaccion">
+      <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Transaccion">
+        <MappingFragment StoreEntitySet="tbl_Transaccion">
+          <ScalarProperty Name="idTransaccionRef" ColumnName="idTransaccionRef" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="idConcepto" ColumnName="idConcepto" />
+          <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
+          <ScalarProperty Name="fechaTransaccion" ColumnName="fechaTransaccion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="idTransaccion" ColumnName="idTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

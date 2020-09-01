@@ -34,99 +34,102 @@
     </asp:ContentPlaceHolder>
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
-    <header>
-        <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-dark navbar-shadow">
-            <div class="navbar-wrapper">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav flex-row">
-                        <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-                        <li class="nav-item"><a class="navbar-brand" href="Administracion.aspx">
-                            <img class="brand-logo" alt="robust admin logo" src="../../../app-assets/images/logo/logo-light-sm.png" />
-                            <h3 class="brand-text">Control de Gastos</h3>
-                        </a></li>
-                        <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
-                    </ul>
-                </div>
-                <div class="navbar-container content">
-                    <div class="collapse navbar-collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav mr-auto float-left">
-                            <li class="nav-item d-none d-md-block">
-                                <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
-                                    <i class="ft-menu"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav float-right">
-                            <li class="dropdown dropdown-user nav-item">
-                                <a class="dropdown-toggle nav-link dropdown-user-link" href="LogIn.aspx" data-toggle="dropdown">
-                                    <span class="user-name">John Doe</span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i>Salir</a>
-                                </div>
-                            </li>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-dark navbar-shadow">
+                <div class="navbar-wrapper">
+                    <div class="navbar-header">
+                        <ul class="nav navbar-nav flex-row">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                            <li class="nav-item"><a class="navbar-brand" href="Administracion.aspx">
+                                <img class="brand-logo" alt="robust admin logo" src="../../../app-assets/images/logo/logo-light-sm.png" />
+                                <h3 class="brand-text">Control de Gastos</h3>
+                            </a></li>
+                            <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
                         </ul>
                     </div>
+                    <div class="navbar-container content">
+                        <div class="collapse navbar-collapse" id="navbar-mobile">
+                            <ul class="nav navbar-nav mr-auto float-left">
+                                <li class="nav-item d-none d-md-block">
+                                    <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+                                        <i class="ft-menu"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav float-right">
+                                <li class="dropdown dropdown-user nav-item">
+                                    <a class="dropdown-toggle nav-link dropdown-user-link" href="LogIn.aspx" data-toggle="dropdown">
+                                        <span class="user-name"><asp:Label ID="lblUsuario" Text="" runat="server" ></asp:Label></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="LogIn.aspx"><i class="ft-power"></i>Salir</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="main-menu menu-fixed menu-dark menu-accordion    menu-shadow " data-scroll-to-active="true">
+                <div class="main-menu-content">
+                    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+
+                        <li class=" nav-item"><a href="ListadoCuenta.aspx"><i class="icon-wallet"></i><span class="menu-title" data-i18n="nav.email-application.main">Cuentas/Monederos</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="ListadoConcepto.aspx"><i class="ft-list"></i><span class="menu-title" data-i18n="nav.chat-application.main">Conceptos</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="ListadoTransacciones.aspx"><i class="ft-repeat"></i><span class="menu-title" data-i18n="nav.scrumboard.main">Movimientos</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-        <div class="main-menu menu-fixed menu-dark menu-accordion    menu-shadow " data-scroll-to-active="true">
-            <div class="main-menu-content">
-                <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        </header>
 
-                    <li class=" nav-item"><a href="ListadoCuenta.aspx"><i class="icon-wallet"></i><span class="menu-title" data-i18n="nav.email-application.main">Cuentas/Monederos</span></a>
-                    </li>
-                    <li class=" nav-item"><a href="ListadoConcepto.aspx"><i class="ft-list"></i><span class="menu-title" data-i18n="nav.chat-application.main">Conceptos</span></a>
-                    </li>
-                    <li class=" nav-item"><a href="ListadoTransacciones.aspx"><i class="ft-repeat"></i><span class="menu-title" data-i18n="nav.scrumboard.main">Movimientos</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <form id="form1" runat="server">
         <div class="app-content content">
-        <div class="content-wrapper">
-            <div class="content-header row">
-            </div>
-            
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div class="content-wrapper">
+                <div class="content-header row">
+                </div>
 
-            </asp:ContentPlaceHolder>
-                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
         </div>
-    </div>
-    </form>
-    <!--<footer class="footer footer-static footer-light navbar-border">
+
+        <!--<footer class="footer footer-static footer-light navbar-border">
         <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
             <span class="float-md-left d-block d-md-inline-block"></span>
             <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block"></span>
         </p>
     </footer>
+            
     <!-- BEGIN VENDOR JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
-    <!-- BEGIN VENDOR JS-->
-    <!-- BEGIN PAGE VENDOR JS-->
-    <script src="../../../app-assets/vendors/js/charts/raphael-min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/morris.min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/chart.min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/moment.min.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/underscore-min.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/clndr.min.js"></script>
-    <script src="../../../app-assets/vendors/js/charts/echarts/echarts.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/unslider-min.js"></script>
-    <!-- END PAGE VENDOR JS-->
-    <!-- BEGIN ROBUST JS-->
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <!-- END ROBUST JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
-    <!-- END PAGE LEVEL JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
-    <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>
-    <!-- END PAGE LEVEL JS-->
+    </form>
+        <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+        <!-- BEGIN VENDOR JS-->
+        <!-- BEGIN PAGE VENDOR JS-->
+        <script src="../../../app-assets/vendors/js/charts/raphael-min.js"></script>
+        <script src="../../../app-assets/vendors/js/charts/morris.min.js"></script>
+        <script src="../../../app-assets/vendors/js/charts/chart.min.js"></script>
+        <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"></script>
+        <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"></script>
+        <script src="../../../app-assets/vendors/js/extensions/moment.min.js"></script>
+        <script src="../../../app-assets/vendors/js/extensions/underscore-min.js"></script>
+        <script src="../../../app-assets/vendors/js/extensions/clndr.min.js"></script>
+        <script src="../../../app-assets/vendors/js/charts/echarts/echarts.js"></script>
+        <script src="../../../app-assets/vendors/js/extensions/unslider-min.js"></script>
+        <!-- END PAGE VENDOR JS-->
+        <!-- BEGIN ROBUST JS-->
+        <script src="../../../app-assets/js/core/app-menu.js"></script>
+        <script src="../../../app-assets/js/core/app.js"></script>
+        <!-- END ROBUST JS-->
+        <!-- BEGIN PAGE LEVEL JS-->
+        <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+        <!-- END PAGE LEVEL JS-->
+        <!-- BEGIN PAGE LEVEL JS-->
+        <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>
+        <!-- END PAGE LEVEL JS-->
+  
 </body>
 </html>

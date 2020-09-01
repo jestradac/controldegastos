@@ -21,9 +21,21 @@ namespace UI
 
         void prepararFormulario()
         {
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+            else
+            {
+                objUsuario = (BRL.tbl_Usuario)Session["usuario"];
+                System.Web.UI.WebControls.Label lblUsuario = (System.Web.UI.WebControls.Label)Master.FindControl("lblUsuario");
+                lblUsuario.Text = objUsuario.nombreCompleto;
+            }
+
             if (!String.IsNullOrEmpty(Request["id"]))
             {
-                //Capturamos Objeto
                 BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
                 objCuenta = objCuenta.traertbl_Cuenta(int.Parse(Request["id"]));
 
@@ -34,6 +46,8 @@ namespace UI
         {
             bool esEditar = !String.IsNullOrEmpty(Request["id"]);
             bool auxControl = false;
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+            objUsuario = (BRL.tbl_Usuario)Session["usuario"];
 
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
 
@@ -43,8 +57,7 @@ namespace UI
             }
 
             objCuenta.nombre = this.txbNombre.Text.Trim();
-            ///modificar idUsuario
-            objCuenta.idUsuario = 1;
+            objCuenta.idUsuario = objUsuario.idUsuario;
             objCuenta.fechaCreacion = DateTime.Now;
             objCuenta.eliminado = false;
 
@@ -65,12 +78,14 @@ namespace UI
             //Capturar el Mensaje
             String mensaje = "";
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+            objUsuario = (BRL.tbl_Usuario)Session["usuario"];
 
             if (String.IsNullOrEmpty(this.txbNombre.Text))
             {
                 mensaje += "- En nombre es obligatorio \n";
             }
-            if (objCuenta.existeNombre(this.txbNombre.Text.Trim()))
+            if (objCuenta.existeNombre(this.txbNombre.Text.Trim(), objUsuario.idUsuario))
             {
                 mensaje += "- '" + this.txbNombre.Text + "', ya existe";
             }

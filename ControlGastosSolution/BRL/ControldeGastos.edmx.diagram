@@ -7,12 +7,12 @@
       <Diagram DiagramId="162274d68b444e788a5e8d43ae947bf4" Name="Diagram1">
         <EntityTypeShape EntityType="db_ControlGastosModel.tbl_Concepto" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_ControlGastosModel.tbl_Cuenta" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_ControlGastosModel.tbl_Transaccion" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="db_ControlGastosModel.tbl_Usuario" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Conce__idUsu__1CF15040" ManuallyRouted="false" />
-        <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Trans__idCon__1ED998B2" ManuallyRouted="false" />
         <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Cuent__idUsu__1DE57479" ManuallyRouted="false" />
-        <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Trans__idCue__1FCDBCEB" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_ControlGastosModel.tbl_Transaccion" Width="1.5" PointX="5.25" PointY="2.625" />
+        <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Trans__idCon__1ED998B2" />
+        <AssociationConnector Association="db_ControlGastosModel.FK__tbl_Trans__idCue__1FCDBCEB" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

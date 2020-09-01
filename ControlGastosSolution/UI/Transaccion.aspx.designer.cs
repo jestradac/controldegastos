@@ -15,15 +15,6 @@ namespace UI
     {
 
         /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// Control txbMonto.
         /// </summary>
         /// <remarks>
@@ -31,15 +22,6 @@ namespace UI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbMonto;
-
-        /// <summary>
-        /// Control txbFechaTrasaccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbFechaTrasaccion;
 
         /// <summary>
         /// Control ddlTipoTransaccion.
@@ -60,13 +42,13 @@ namespace UI
         protected global::System.Web.UI.WebControls.DropDownList ddlCuenta;
 
         /// <summary>
-        /// Control ddlConcepto.
+        /// Control lblTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlConcepto;
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
         /// Control ddlCuentaDestino.
@@ -78,30 +60,30 @@ namespace UI
         protected global::System.Web.UI.WebControls.DropDownList ddlCuentaDestino;
 
         /// <summary>
-        /// Control ddlConceptoDestino.
+        /// Control ddlConcepto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlConceptoDestino;
+        protected global::System.Web.UI.WebControls.DropDownList ddlConcepto;
 
         /// <summary>
-        /// Control btnGuardar.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Control btnCancelar.
+        /// Control Button2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

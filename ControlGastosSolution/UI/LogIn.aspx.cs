@@ -16,25 +16,28 @@ namespace UI
         }
         void Inicializar()
         {
+            Session["usuario"] = null;
             txtEmail.Text = "";
             txtPassword.Text = "";
         }
         void VerificarLogIn()
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
-
+            BRL.tbl_Usuario objUsuario1 = new BRL.tbl_Usuario();
+            objUsuario1 = objUsuario.verificarCombinacion(txtEmail.Text.Trim(), txtPassword.Text);
 
             if (!objUsuario.existeEmail(txtEmail.Text.Trim()))
             {
                 MessageBox.Show("El correo electrónico no existe");
 
             }
-            else if (objUsuario.existeEmail(txtEmail.Text.Trim()) && objUsuario.verificarCombinacion(txtEmail.Text.Trim(), txtPassword.Text) == null)
+            else if (objUsuario.existeEmail(txtEmail.Text.Trim()) && objUsuario1 == null)
             {
                 MessageBox.Show("Los datos no coinciden");
             }
             else
             {
+                Session["usuario"] = objUsuario1;
                 Response.Redirect("Administracion.aspx", true);
             }
         }

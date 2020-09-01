@@ -19,8 +19,8 @@ namespace BRL
         public System.DateTime fechaTransaccion { get; set; }
         public int idCuenta { get; set; }
         public int idConcepto { get; set; }
-        public Nullable<bool> idTransaccionRef { get; set; }
         public bool eliminado { get; set; }
+        public Nullable<int> idTransaccionRef { get; set; }
     
         public virtual tbl_Concepto tbl_Concepto { get; set; }
         public virtual tbl_Cuenta tbl_Cuenta { get; set; }

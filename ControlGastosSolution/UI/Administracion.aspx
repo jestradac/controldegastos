@@ -29,7 +29,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="succes">Hoverable rows</h1>
+                        <h1 class="succes">Bnb Bs.000</h1>
                         <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -44,36 +44,44 @@
                         <div class="card-body">
                             
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="card-content collapse show">
+                            <div class="card-body card-dashboard">
+                                <asp:GridView ID="gvAdministracion" CssClass="table table-striped table-bordered zero-configuration" runat="server" AutoGenerateColumns="false"
+                                    GridLines="None" Width="100%" EmptyDataText="- No hay datos -"
+                                    OnPageIndexChanging="gvAdministracion_PageIndexChanging"
+                                    OnDataBound="gvAdministracion_DataBound" OnRowDataBound="gvAdministracion_RowDataBound" AllowPaging="True" PageSize="20">
+                                    <AlternatingRowStyle BackColor="#F0F0F0" Font-Overline="False" Wrap="True" />
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Opciones">
+                                            <ItemTemplate>
+                                                <asp:HyperLink ID="hlEditar" runat="server"><i class="ft-edit"></i></asp:HyperLink>
+                                            </ItemTemplate>
+                                            <ItemStyle Width="60px" />
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Fecha">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblFecha" runat="server" Text="lblFecha"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Monto">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblMonto" runat="server" Text="lblMonto"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Tipo Transacción">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblTipo" runat="server" Text="lblTipo"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Concepto">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblConcepto" runat="server" Text="lblConcepto"></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                    <HeaderStyle BackColor="Silver" HorizontalAlign="Left" />
+                                </asp:GridView>
+                            </div>
                         </div>
                     </div>
                 </div>

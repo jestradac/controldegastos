@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_ControlGastosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db_ControlGastosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_Concepto">
           <Key>
             <PropertyRef Name="idConcepto" />
@@ -35,8 +35,8 @@
           <Property Name="fechaTransaccion" Type="datetime" Nullable="false" />
           <Property Name="idCuenta" Type="int" Nullable="false" />
           <Property Name="idConcepto" Type="int" Nullable="false" />
-          <Property Name="idTransaccionRef" Type="bit" />
           <Property Name="eliminado" Type="bit" Nullable="false" />
+          <Property Name="idTransaccionRef" Type="int" />
         </EntityType>
         <EntityType Name="tbl_Usuario">
           <Key>
@@ -118,8 +118,7 @@
             <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_ControlGastosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -134,7 +133,7 @@
           <Property Name="idUsuario" Type="Int32" Nullable="false" />
           <Property Name="eliminado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tbl_Usuario" Relationship="Self.FK__tbl_Conce__idUsu__1CF15040" FromRole="tbl_Concepto" ToRole="tbl_Usuario" />
-          <NavigationProperty Name="tbl_Transaccion" Relationship="Self.FK__tbl_Trans__idCon__1ED998B2" FromRole="tbl_Concepto" ToRole="tbl_Transaccion" />
+          <NavigationProperty Name="tbl_Transaccion" Relationship="db_ControlGastosModel.FK__tbl_Trans__idCon__1ED998B2" FromRole="tbl_Concepto" ToRole="tbl_Transaccion" />
         </EntityType>
         <EntityType Name="tbl_Cuenta">
           <Key>
@@ -146,21 +145,7 @@
           <Property Name="idUsuario" Type="Int32" Nullable="false" />
           <Property Name="eliminado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tbl_Usuario" Relationship="Self.FK__tbl_Cuent__idUsu__1DE57479" FromRole="tbl_Cuenta" ToRole="tbl_Usuario" />
-          <NavigationProperty Name="tbl_Transaccion" Relationship="Self.FK__tbl_Trans__idCue__1FCDBCEB" FromRole="tbl_Cuenta" ToRole="tbl_Transaccion" />
-        </EntityType>
-        <EntityType Name="tbl_Transaccion">
-          <Key>
-            <PropertyRef Name="idTransaccion" />
-          </Key>
-          <Property Name="idTransaccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="monto" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-          <Property Name="fechaTransaccion" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="idCuenta" Type="Int32" Nullable="false" />
-          <Property Name="idConcepto" Type="Int32" Nullable="false" />
-          <Property Name="idTransaccionRef" Type="Boolean" />
-          <Property Name="eliminado" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="tbl_Concepto" Relationship="Self.FK__tbl_Trans__idCon__1ED998B2" FromRole="tbl_Transaccion" ToRole="tbl_Concepto" />
-          <NavigationProperty Name="tbl_Cuenta" Relationship="Self.FK__tbl_Trans__idCue__1FCDBCEB" FromRole="tbl_Transaccion" ToRole="tbl_Cuenta" />
+          <NavigationProperty Name="tbl_Transaccion" Relationship="db_ControlGastosModel.FK__tbl_Trans__idCue__1FCDBCEB" FromRole="tbl_Cuenta" ToRole="tbl_Transaccion" />
         </EntityType>
         <EntityType Name="tbl_Usuario">
           <Key>
@@ -186,18 +171,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Trans__idCon__1ED998B2">
-          <End Role="tbl_Concepto" Type="Self.tbl_Concepto" Multiplicity="1" />
-          <End Role="tbl_Transaccion" Type="Self.tbl_Transaccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tbl_Concepto">
-              <PropertyRef Name="idConcepto" />
-            </Principal>
-            <Dependent Role="tbl_Transaccion">
-              <PropertyRef Name="idConcepto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__tbl_Cuent__idUsu__1DE57479">
           <End Role="tbl_Usuario" Type="Self.tbl_Usuario" Multiplicity="1" />
           <End Role="tbl_Cuenta" Type="Self.tbl_Cuenta" Multiplicity="*" />
@@ -210,9 +183,57 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="db_ControlGastosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Concepto" EntityType="Self.tbl_Concepto" />
+          <EntitySet Name="tbl_Cuenta" EntityType="Self.tbl_Cuenta" />
+          <EntitySet Name="tbl_Usuario" EntityType="Self.tbl_Usuario" />
+          <AssociationSet Name="FK__tbl_Conce__idUsu__1CF15040" Association="Self.FK__tbl_Conce__idUsu__1CF15040">
+            <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
+            <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Cuent__idUsu__1DE57479" Association="Self.FK__tbl_Cuent__idUsu__1DE57479">
+            <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
+            <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
+          </AssociationSet>
+          <EntitySet Name="tbl_Transaccion" EntityType="db_ControlGastosModel.tbl_Transaccion" />
+          <AssociationSet Name="FK__tbl_Trans__idCon__1ED998B2" Association="db_ControlGastosModel.FK__tbl_Trans__idCon__1ED998B2">
+            <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
+            <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tbl_Trans__idCue__1FCDBCEB" Association="db_ControlGastosModel.FK__tbl_Trans__idCue__1FCDBCEB">
+            <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
+            <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_Transaccion">
+          <Key>
+            <PropertyRef Name="idTransaccion" />
+          </Key>
+          <Property Name="idTransaccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="monto" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="fechaTransaccion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idCuenta" Type="Int32" Nullable="false" />
+          <Property Name="idConcepto" Type="Int32" Nullable="false" />
+          <Property Name="eliminado" Type="Boolean" Nullable="false" />
+          <Property Name="idTransaccionRef" Type="Int32" />
+          <NavigationProperty Name="tbl_Concepto" Relationship="db_ControlGastosModel.FK__tbl_Trans__idCon__1ED998B2" FromRole="tbl_Transaccion" ToRole="tbl_Concepto" />
+          <NavigationProperty Name="tbl_Cuenta" Relationship="db_ControlGastosModel.FK__tbl_Trans__idCue__1FCDBCEB" FromRole="tbl_Transaccion" ToRole="tbl_Cuenta" />
+        </EntityType>
+        <Association Name="FK__tbl_Trans__idCon__1ED998B2">
+          <End Type="db_ControlGastosModel.tbl_Concepto" Role="tbl_Concepto" Multiplicity="1" />
+          <End Type="db_ControlGastosModel.tbl_Transaccion" Role="tbl_Transaccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Concepto">
+              <PropertyRef Name="idConcepto" />
+            </Principal>
+            <Dependent Role="tbl_Transaccion">
+              <PropertyRef Name="idConcepto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__tbl_Trans__idCue__1FCDBCEB">
-          <End Role="tbl_Cuenta" Type="Self.tbl_Cuenta" Multiplicity="1" />
-          <End Role="tbl_Transaccion" Type="Self.tbl_Transaccion" Multiplicity="*" />
+          <End Type="db_ControlGastosModel.tbl_Cuenta" Role="tbl_Cuenta" Multiplicity="1" />
+          <End Type="db_ControlGastosModel.tbl_Transaccion" Role="tbl_Transaccion" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tbl_Cuenta">
               <PropertyRef Name="idCuenta" />
@@ -222,34 +243,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_ControlGastosEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbl_Concepto" EntityType="Self.tbl_Concepto" />
-          <EntitySet Name="tbl_Cuenta" EntityType="Self.tbl_Cuenta" />
-          <EntitySet Name="tbl_Transaccion" EntityType="Self.tbl_Transaccion" />
-          <EntitySet Name="tbl_Usuario" EntityType="Self.tbl_Usuario" />
-          <AssociationSet Name="FK__tbl_Conce__idUsu__1CF15040" Association="Self.FK__tbl_Conce__idUsu__1CF15040">
-            <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
-            <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tbl_Trans__idCon__1ED998B2" Association="Self.FK__tbl_Trans__idCon__1ED998B2">
-            <End Role="tbl_Concepto" EntitySet="tbl_Concepto" />
-            <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tbl_Cuent__idUsu__1DE57479" Association="Self.FK__tbl_Cuent__idUsu__1DE57479">
-            <End Role="tbl_Usuario" EntitySet="tbl_Usuario" />
-            <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
-          </AssociationSet>
-          <AssociationSet Name="FK__tbl_Trans__idCue__1FCDBCEB" Association="Self.FK__tbl_Trans__idCue__1FCDBCEB">
-            <End Role="tbl_Cuenta" EntitySet="tbl_Cuenta" />
-            <End Role="tbl_Transaccion" EntitySet="tbl_Transaccion" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_ControlGastosModelStoreContainer" CdmEntityContainer="db_ControlGastosEntities1">
+        <EntityContainerMapping StorageEntityContainer="db_ControlGastosModelStoreContainer" CdmEntityContainer="db_ControlGastosEntities">
           <EntitySetMapping Name="tbl_Concepto">
             <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Concepto">
               <MappingFragment StoreEntitySet="tbl_Concepto">
@@ -273,19 +272,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Transaccion">
-            <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Transaccion">
-              <MappingFragment StoreEntitySet="tbl_Transaccion">
-                <ScalarProperty Name="idTransaccion" ColumnName="idTransaccion" />
-                <ScalarProperty Name="monto" ColumnName="monto" />
-                <ScalarProperty Name="fechaTransaccion" ColumnName="fechaTransaccion" />
-                <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
-                <ScalarProperty Name="idConcepto" ColumnName="idConcepto" />
-                <ScalarProperty Name="idTransaccionRef" ColumnName="idTransaccionRef" />
-                <ScalarProperty Name="eliminado" ColumnName="eliminado" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tbl_Usuario">
             <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Usuario">
               <MappingFragment StoreEntitySet="tbl_Usuario">
@@ -294,6 +280,19 @@
                 <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
                 <ScalarProperty Name="contrasena" ColumnName="contrasena" />
                 <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Transaccion">
+            <EntityTypeMapping TypeName="db_ControlGastosModel.tbl_Transaccion">
+              <MappingFragment StoreEntitySet="tbl_Transaccion">
+                <ScalarProperty Name="idTransaccionRef" ColumnName="idTransaccionRef" />
+                <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+                <ScalarProperty Name="idConcepto" ColumnName="idConcepto" />
+                <ScalarProperty Name="idCuenta" ColumnName="idCuenta" />
+                <ScalarProperty Name="fechaTransaccion" ColumnName="fechaTransaccion" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="idTransaccion" ColumnName="idTransaccion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

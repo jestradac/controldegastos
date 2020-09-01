@@ -7,7 +7,7 @@ namespace BRL
     public partial class tbl_Transaccion
     {
         //Entidades
-        BRL.db_ControlGastosEntities1 objEntidad = new db_ControlGastosEntities1();
+        BRL.db_ControlGastosEntities objEntidad = new db_ControlGastosEntities();
 
         /// <summary>
         /// Guardar
@@ -32,9 +32,11 @@ namespace BRL
         /// Listar tbl_Transaccions
         /// </summary>
         /// <returns></returns>
-        public List<BRL.tbl_Transaccion> listartbl_Transaccions()
+        public List<BRL.tbl_Transaccion> listartbl_Transaccions(int auxUsuario)
         {
             return (from T in DatosComun.dbContexto.tbl_Transaccion
+                    where T.eliminado.Equals(false)
+                    && T.tbl_Cuenta.idUsuario.Equals(auxUsuario)
                     select T).ToList();
         }
 

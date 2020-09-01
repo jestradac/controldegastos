@@ -18,9 +18,26 @@ namespace UI
         }
         private void cargarDatos()
         {
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+            else
+            {
+                objUsuario = (BRL.tbl_Usuario)Session["usuario"];
+                Label lblUsuario = (Label)Master.FindControl("lblUsuario");
+                lblUsuario.Text = objUsuario.nombreCompleto;
+            }
+
             BRL.tbl_Concepto objConcepto = new BRL.tbl_Concepto();
-            this.gvConcepto.DataSource = objConcepto.listartbl_Conceptos();
+            this.gvConcepto.DataSource = objConcepto.listartbl_Conceptos(objUsuario.idUsuario, true);
             this.gvConcepto.DataBind();
+
+            BRL.tbl_Concepto objConceptoI = new BRL.tbl_Concepto();
+            this.gvConceptoI.DataSource = objConceptoI.listartbl_Conceptos(objUsuario.idUsuario, false);
+            this.gvConceptoI.DataBind();
         }
         protected void gvConcepto_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -40,6 +57,33 @@ namespace UI
                 else
                 {
                     lblTipoTransaccion.Text = "Egreso";
+                }
+
+                HyperLink hlEditar = (HyperLink)e.Row.FindControl("hlEditar");
+                hlEditar.NavigateUrl = "Concepto.aspx?id=" + objConcepto.idConcepto.ToString();
+
+                LinkButton lbEliminar = (LinkButton)e.Row.FindControl("lbEliminar");
+                lbEliminar.Attributes.Add("auxID", objConcepto.idConcepto.ToString());
+            }
+        }
+        protected void gvConceptoI_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                BRL.tbl_Concepto objConcepto = (BRL.tbl_Concepto)e.Row.DataItem;
+
+                Label lblNombreI = (Label)e.Row.FindControl("lblNombreI");
+                lblNombreI.Text = objConcepto.nombre.Trim();
+
+                Label lblTipoTransaccionI = (Label)e.Row.FindControl("lblTipoTransaccionI");
+
+                if (objConcepto.tipoTransaccion.Equals(false))
+                {
+                    lblTipoTransaccionI.Text = "Ingreso";
+                }
+                else
+                {
+                    lblTipoTransaccionI.Text = "Egreso";
                 }
 
                 HyperLink hlEditar = (HyperLink)e.Row.FindControl("hlEditar");
@@ -76,9 +120,34 @@ namespace UI
         {
             try
             {
-                this.gvConcepto.HeaderRow.TableSection = TableRowSection.TableHeader;
+                if (gvConcepto.Rows.Count > 0)
+                {
+                    this.gvConcepto.HeaderRow.TableSection = TableRowSection.TableHeader;
+                }
+                
             }
             catch { }
         }
+
+        protected void gvConceptoI_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.gvConceptoI.PageIndex = e.NewPageIndex;
+            this.cargarDatos();
+        }
+
+        protected void gvConceptoI_DataBound(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gvConceptoI.Rows.Count > 0)
+                {
+                    this.gvConceptoI.HeaderRow.TableSection = TableRowSection.TableHeader;
+                }
+
+            }
+            catch { }
+        }
+
+        
     }
 }

@@ -11,7 +11,7 @@ namespace UI
 {
 
 
-    public partial class ListadoConcepto
+    public partial class ListadoTransacciones
     {
 
         /// <summary>
@@ -24,21 +24,12 @@ namespace UI
         protected global::System.Web.UI.WebControls.Button btnAgregar;
 
         /// <summary>
-        /// Control gvConceptoI.
+        /// Control gvTransaccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvConceptoI;
-
-        /// <summary>
-        /// Control gvConcepto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvConcepto;
+        protected global::System.Web.UI.WebControls.GridView gvTransaccion;
     }
 }
