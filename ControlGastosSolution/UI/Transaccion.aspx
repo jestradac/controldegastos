@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Transaccion.aspx.cs" Inherits="UI.Transaccion" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
-</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-header row">
@@ -32,25 +31,21 @@
                                         <div class="form-group row">
                                             <label class="col-md-3 label-control" for="projectinput1">Monto</label>
                                             <div class="col-md-9">
-                                                <asp:TextBox ID="txbMonto" class="form-control" TextMode="Number" step=".01" placeholder="00.00" name="fname" MaxLength="10" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txbMonto" class="form-control"  TextMode="Number" step=".01" placeholder="00.01" name="fname" MaxLength="10" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-md-3 label-control" for="projectinput6">Tipo de Transacción</label>
                                             <div class="col-md-9">
-                                                <asp:DropDownList class="form-control" ID="ddlTipoTransaccion" runat="server" OnSelectedIndexChanged="ddlTipoTransaccion_SelectedIndexChanged" AutoPostBack="true">
-                                                   
-                                                </asp:DropDownList>
+                                                <asp:DropDownList class="form-control" ID="ddlTipoTransaccion" runat="server" OnSelectedIndexChanged="ddlTipoTransaccion_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                                             </div>
                                         </div>
-
                                         <div class="form-group row">
                                             <label class="col-md-3 label-control" for="projectinput6">Cuenta</label>
                                             <div class="col-md-9">
                                                 <asp:DropDownList class="form-control" ID="ddlCuenta" runat="server"></asp:DropDownList>
                                             </div>
                                         </div>
-
                                         <div class="form-group row">
                                             <label class="col-md-3 label-control" for="projectinput6"><asp:Label runat="server" ID="lblTitulo"></asp:Label></label>
                                             <div class="col-md-9">
@@ -58,11 +53,9 @@
                                                 <asp:DropDownList class="form-control" ID="ddlConcepto" runat="server"></asp:DropDownList>
                                             </div>
                                         </div>
-
                                         <div class="form-actions">
                                             <asp:Button ID="Button1" class="btn btn-success mr-1" runat="server" Text="Guardar" OnClick="btnGuardar_Click"></asp:Button>
                                             <asp:Button ID="Button2" class="btn btn-warning" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
-
                                         </div>
                                     </div>
                                 </div>

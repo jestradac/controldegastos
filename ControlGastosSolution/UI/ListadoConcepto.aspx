@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="ListadoConcepto.aspx.cs" Inherits="UI.ListadoConcepto" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="content-header row">
         <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
             <h3 class="content-header-title mb-0 d-inline-block">Administración de Conceptos</h3>
@@ -12,7 +11,6 @@
             <asp:Button ID="btnAgregar" class="btn btn-success btn-min-width mr-1 mb-1" runat="server" Text="Agregar" onclick="btnAgregar_Click"/>
         </div>
     </div>
-
     <div>
         <section id="configuration1">
             <div class="row">
@@ -64,7 +62,6 @@
             </div>
         </section>
     </div>
-
     <div>
         <section id="configuration">
             <div class="row">

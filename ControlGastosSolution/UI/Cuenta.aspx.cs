@@ -10,7 +10,6 @@ namespace UI
 {
     public partial class Cuenta : System.Web.UI.Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -18,7 +17,6 @@ namespace UI
                 this.prepararFormulario();
             }
         }
-
         void prepararFormulario()
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
@@ -48,7 +46,6 @@ namespace UI
             bool auxControl = false;
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
             objUsuario = (BRL.tbl_Usuario)Session["usuario"];
-
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
 
             if (esEditar)
@@ -75,7 +72,6 @@ namespace UI
         }
         private String validar()
         {
-            //Capturar el Mensaje
             String mensaje = "";
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
@@ -89,7 +85,6 @@ namespace UI
             {
                 mensaje += "- '" + this.txbNombre.Text + "', ya existe";
             }
-            //Retornando
             return mensaje;
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -105,7 +100,6 @@ namespace UI
                 MessageBox.Show("Hubo un error al guardar la cuenta");
             }
         }
-
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("ListadoCuenta.aspx", true);

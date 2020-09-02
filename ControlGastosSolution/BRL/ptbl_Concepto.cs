@@ -18,7 +18,6 @@ namespace BRL
             DatosComun.dbContexto.tbl_Concepto.Add(this);
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Modificar
         /// </summary>
@@ -27,7 +26,6 @@ namespace BRL
         {
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Listar tbl_Conceptos
         /// </summary>
@@ -40,10 +38,9 @@ namespace BRL
                     // 1 y 2 son Traspaso
                     && (C.idConcepto > 2)
                     && C.tipoTransaccion.Equals(esEgreso)
-                    orderby C.nombre ascending
+                    orderby C.fechaCreacion descending
                     select C).ToList();
         }
-
         /// <summary>
         /// Traer tbl_Concepto por ID
         /// </summary>
@@ -60,13 +57,14 @@ namespace BRL
         /// </summary>
         /// <param name="auxNombre"></param>
         /// <returns></returns>
-        public bool existeCombinacion(String auxNombre, Boolean auxTipoTransaccion)
+        public bool existeCombinacion(String auxNombre, Boolean auxTipoTransaccion, int auxUsuario)
         {
             try
             {
                 return (from C in BRL.DatosComun.dbContexto.tbl_Concepto
                         where C.nombre.ToLower().Trim().Equals(auxNombre.ToLower().Trim())
                         && C.tipoTransaccion.Equals(auxTipoTransaccion)
+                        && C.idUsuario.Equals(auxUsuario)
                         select C).Count() > 0;
             }
             catch

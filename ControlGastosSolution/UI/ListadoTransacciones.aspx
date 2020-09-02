@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="ListadoTransacciones.aspx.cs" Inherits="UI.ListadoTransacciones" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-header row">
         <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
@@ -10,7 +11,6 @@
             <asp:Button ID="btnAgregar" class="btn btn-success btn-min-width mr-1 mb-1" runat="server" Text="Agregar" onClick="btnAgregar_Click"/>
         </div>
     </div>
-
     <div>
         <section id="configuration">
             <div class="row">
@@ -49,7 +49,6 @@
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="Monto">
                                             <ItemTemplate>
-                                                <asp:Label ID="lblSigno" runat="server" Text=""></asp:Label>
                                                 <asp:Label ID="lblMonto" runat="server" Text="lblMonto"></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>

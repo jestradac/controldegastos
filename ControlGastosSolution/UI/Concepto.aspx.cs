@@ -20,23 +20,26 @@ namespace UI
         void prepararFormulario()
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
             if (Session["usuario"] == null)
             {
                 Response.Redirect("LogIn.aspx");
             }
             else
             {
-                
                 objUsuario = (BRL.tbl_Usuario)Session["usuario"];
                 System.Web.UI.WebControls.Label lblUsuario = (System.Web.UI.WebControls.Label)Master.FindControl("lblUsuario");
                 lblUsuario.Text = objUsuario.nombreCompleto;
             }
+
             if (!String.IsNullOrEmpty(Request["id"]))
             {
                 BRL.tbl_Concepto objConcepto = new BRL.tbl_Concepto();
                 objConcepto = objConcepto.traertbl_Concepto(int.Parse(Request["id"]));
+
                 this.txbNombre.Text = objConcepto.nombre.Trim();
                 this.ddlTipoTransaccion.Enabled = false;
+
                 if (objConcepto.tipoTransaccion.Equals(false))
                 {
                     ddlTipoTransaccion.SelectedValue = "Ingreso";
@@ -57,7 +60,6 @@ namespace UI
             bool auxControl = false;
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
             objUsuario = (BRL.tbl_Usuario)Session["usuario"];
-
             BRL.tbl_Concepto objConcepto = new BRL.tbl_Concepto();
 
             if (esEditar)
@@ -77,6 +79,7 @@ namespace UI
             {
                 objConcepto.tipoTransaccion = true;
             }
+
             objConcepto.fechaCreacion = DateTime.Now;
             objConcepto.eliminado = false;
 
@@ -108,15 +111,15 @@ namespace UI
             //Capturar el Mensaje
             String mensaje = "";
             bool auxTipoTransaccion = tipoTransaccion();
-
+            BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+            objUsuario = (BRL.tbl_Usuario)Session["usuario"];
             BRL.tbl_Concepto objConcepto = new BRL.tbl_Concepto();
             
-
             if (String.IsNullOrEmpty(this.txbNombre.Text))
             {
                 mensaje += "- En nombre es obligatorio \n";
             }
-            if (objConcepto.existeCombinacion(this.txbNombre.Text.Trim(), auxTipoTransaccion))
+            if (objConcepto.existeCombinacion(this.txbNombre.Text.Trim(), auxTipoTransaccion, objUsuario.idUsuario))
             {
                 mensaje += "- '" + this.txbNombre.Text + "', ya existe";
             }

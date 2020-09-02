@@ -40,6 +40,7 @@ namespace UI
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 BRL.tbl_Cuenta objCuenta = (BRL.tbl_Cuenta)e.Row.DataItem;
+                BRL.tbl_Cuenta objCuentaAux = new BRL.tbl_Cuenta();
 
                 Label lblNombre = (Label)e.Row.FindControl("lblNombre");
                 lblNombre.Text = objCuenta.nombre.Trim();
@@ -48,7 +49,7 @@ namespace UI
                 lblFechaCreacion.Text = objCuenta.fechaCreacion.ToString().Trim();
 
                 Label lblSaldo = (Label)e.Row.FindControl("lblSaldo");
-                lblSaldo.Text = "FALTA";
+                lblSaldo.Text = objCuentaAux.verSaldo(objCuenta.idCuenta).ToString();
 
                 HyperLink hlEditar = (HyperLink)e.Row.FindControl("hlEditar");
                 hlEditar.NavigateUrl = "Cuenta.aspx?id=" + objCuenta.idCuenta.ToString();
@@ -65,21 +66,17 @@ namespace UI
             objCuenta = objCuenta.traertbl_Cuenta(int.Parse(lbEliminar.Attributes["auxID"]));
             objCuenta.eliminado = true;
             objCuenta.modificar();
-
             this.cargarDatos();
         }
-
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Cuenta.aspx", true);
         }
-
         protected void gvCuenta_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             this.gvCuenta.PageIndex = e.NewPageIndex;
             this.cargarDatos();
         }
-
         protected void gvCuenta_DataBound(object sender, EventArgs e)
         {
             try

@@ -97,7 +97,6 @@ namespace UI
         {
             Response.Redirect("Concepto.aspx", true);
         }
-
         protected void lbEliminar_Click(object sender, EventArgs e)
         {
             LinkButton lbEliminar = (LinkButton)sender;
@@ -109,13 +108,11 @@ namespace UI
 
             this.cargarDatos();
         }
-
         protected void gvConcepto_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             this.gvConcepto.PageIndex = e.NewPageIndex;
             this.cargarDatos();
         }
-
         protected void gvConcepto_DataBound(object sender, EventArgs e)
         {
             try
@@ -128,13 +125,11 @@ namespace UI
             }
             catch { }
         }
-
         protected void gvConceptoI_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             this.gvConceptoI.PageIndex = e.NewPageIndex;
             this.cargarDatos();
         }
-
         protected void gvConceptoI_DataBound(object sender, EventArgs e)
         {
             try
@@ -147,7 +142,5 @@ namespace UI
             }
             catch { }
         }
-
-        
     }
 }

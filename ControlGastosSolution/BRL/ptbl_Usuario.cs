@@ -18,7 +18,6 @@ namespace BRL
             DatosComun.dbContexto.tbl_Usuario.Add(this);
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Modificar
         /// </summary>
@@ -27,7 +26,6 @@ namespace BRL
         {
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Listar tbl_Usuarios
         /// </summary>
@@ -38,7 +36,6 @@ namespace BRL
                     orderby C.nombreCompleto ascending
                     select C).ToList();
         }
-
         /// <summary>
         /// Traer tbl_Usuario por ID
         /// </summary>

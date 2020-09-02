@@ -19,6 +19,7 @@ namespace UI
         private void cargarDatos()
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
             if (Session["usuario"] == null)
             {
                 Response.Redirect("LogIn.aspx");
@@ -43,21 +44,15 @@ namespace UI
                 Label lblFechaTransaccion = (Label)e.Row.FindControl("lblFechaTransaccion");
                 lblFechaTransaccion.Text = objTransaccion.fechaTransaccion.ToString().Trim();
 
-                Label lblSigno = (Label)e.Row.FindControl("lblSigno");
-
                 Label lblMonto = (Label)e.Row.FindControl("lblMonto");
                 lblMonto.Text = objTransaccion.monto.ToString().Trim();
-                ///modificar
+
                 if (objTransaccion.tbl_Concepto.tipoTransaccion.Equals(false))
                 {
-                    lblSigno.Text = "+";
-                    lblSigno.CssClass = "text-muted text-bold-700 success text-center";
                     lblMonto.CssClass = "float-right success";
                 }
                 else
                 {
-                    lblSigno.Text = "-";
-                    lblSigno.CssClass = "text-muted text-bold-700 danger text-center";
                     lblMonto.CssClass = "float-right danger";
                 }
 
@@ -86,6 +81,7 @@ namespace UI
             objTransaccion = objTransaccion.traertbl_Transaccion(int.Parse(lbEliminar.Attributes["auxID"]));
             objTransaccion.eliminado = true;
             objTransaccion.modificar();
+
             if (objTransaccion.idTransaccionRef != null)
             {
                 BRL.tbl_Transaccion objTransaccionRef = new BRL.tbl_Transaccion();
@@ -94,6 +90,7 @@ namespace UI
                 objTransaccionRef.modificar();
 
             }
+
             this.cargarDatos();
         }
         protected void gvTransaccion_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -110,7 +107,6 @@ namespace UI
                 {
                     this.gvTransaccion.HeaderRow.TableSection = TableRowSection.TableHeader;
                 }
-                
             }
             catch { }
         }

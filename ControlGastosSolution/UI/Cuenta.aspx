@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Cuenta.aspx.cs" Inherits="UI.Cuenta" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
-</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-header row">
@@ -38,7 +37,6 @@
                                         <div class="form-actions">
                                             <asp:Button ID="btnGuardar" class="btn btn-success mr-1" runat="server" Text="Guardar" OnClick="btnGuardar_Click"></asp:Button>
                                             <asp:Button ID="btnCancelar" class="btn btn-warning" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
-
                                         </div>
                                     </div>
                                 </div>

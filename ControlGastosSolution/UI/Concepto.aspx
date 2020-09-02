@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Concepto.aspx.cs" Inherits="UI.Concepto" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
-</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-header row">
@@ -44,11 +43,9 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
-
                                         <div class="form-actions">
                                             <asp:Button ID="Button1" class="btn btn-success mr-1" runat="server" Text="Guardar" OnClick="btnGuardar_Click"></asp:Button>
                                             <asp:Button ID="Button2" class="btn btn-warning" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
-
                                         </div>
                                     </div>
                                 </div>

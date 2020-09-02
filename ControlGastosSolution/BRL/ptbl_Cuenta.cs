@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
 namespace BRL
@@ -10,6 +11,16 @@ namespace BRL
         BRL.db_ControlGastosEntities objEntidad = new db_ControlGastosEntities();
 
         /// <summary>
+        /// Retorna el nombre + el saldo de la cuenta
+        /// </summary>
+        public String nombreSaldo
+        {
+            get
+            {
+                return this.nombre.Trim() + "[Bs. " + this.verSaldo(this.idCuenta).ToString() + "] ";
+            }
+        }
+        /// <summary>
         /// Guardar
         /// </summary>
         /// <returns></returns>
@@ -18,7 +29,6 @@ namespace BRL
             DatosComun.dbContexto.tbl_Cuenta.Add(this);
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Modificar
         /// </summary>
@@ -27,7 +37,6 @@ namespace BRL
         {
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Listar tbl_Cuentas
         /// </summary>
@@ -37,10 +46,9 @@ namespace BRL
             return (from C in DatosComun.dbContexto.tbl_Cuenta
                     where C.eliminado.Equals(false)
                     && C.idUsuario.Equals(auxUsuario)
-                    orderby C.nombre ascending
+                    orderby C.fechaCreacion descending
                     select C).ToList();
         }
-
         /// <summary>
         /// Traer tbl_Cuenta por ID
         /// </summary>
@@ -71,6 +79,11 @@ namespace BRL
                 return false;
             }
         }
+        /// <summary>
+        /// Ver saldo por cuenta
+        /// </summary>
+        /// <param name="auxSaldo"></param>
+        /// <returns></returns>
         public decimal verSaldo(int auxSaldo)
         {
             try
@@ -83,7 +96,27 @@ namespace BRL
             }
             catch
             {
-                return -1;
+                return 0;
+            }
+        }
+        /// <summary>
+        /// Ver Saldo Global
+        /// </summary>
+        /// <param name="auxUsuario"></param>
+        /// <returns></returns>
+        public decimal verSaldoGlobal(int auxUsuario)
+        {
+            try
+            {
+                return
+                        (from C in BRL.DatosComun.dbContexto.tbl_Transaccion
+                         where C.tbl_Cuenta.idUsuario.Equals(auxUsuario)
+                         select C.monto
+                        ).Sum();
+            }
+            catch
+            {
+                return 0;
             }
         }
     }

@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="ListadoCuenta.aspx.cs" Inherits="UI.ListadoCuenta" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="content-header row">
         <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
             <h3 class="content-header-title mb-0 d-inline-block">Administración de Cuentas / Monderos</h3>

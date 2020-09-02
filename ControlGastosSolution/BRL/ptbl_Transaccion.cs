@@ -18,7 +18,6 @@ namespace BRL
             DatosComun.dbContexto.tbl_Transaccion.Add(this);
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Modificar
         /// </summary>
@@ -27,7 +26,6 @@ namespace BRL
         {
             return Convert.ToBoolean(DatosComun.dbContexto.SaveChanges());
         }
-
         /// <summary>
         /// Listar tbl_Transaccions
         /// </summary>
@@ -37,9 +35,17 @@ namespace BRL
             return (from T in DatosComun.dbContexto.tbl_Transaccion
                     where T.eliminado.Equals(false)
                     && T.tbl_Cuenta.idUsuario.Equals(auxUsuario)
+                    orderby T.fechaTransaccion descending
                     select T).ToList();
         }
-
+        public List<BRL.tbl_Transaccion> listartbl_TransaccionCuenta(int auxCuenta)
+        {
+            return (from T in DatosComun.dbContexto.tbl_Transaccion
+                    where T.eliminado.Equals(false)
+                    && T.idCuenta.Equals(auxCuenta)
+                    orderby T.fechaTransaccion descending
+                    select T).ToList();
+        }
         /// <summary>
         /// Traer tbl_Transaccion por ID
         /// </summary>

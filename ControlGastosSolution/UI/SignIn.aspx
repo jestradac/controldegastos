@@ -7,9 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>CONTROL DE GASTOS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    
-	<%--<script type="application/x-javascript"> 
-        addEventListener("load", function() { setTimeout(hideURLbar, 1); }, true); function hideURLbar(){ window.scrollTo(0,1); } </script>--%>
     <!-- font files -->
 	<link href='//fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'/>
 	<link href='//fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'/>
@@ -23,7 +20,7 @@
     <form id="form1" runat="server">
         <div id="wrapper">
             <div id="login" class="animate form">
-                <%--                    <form  action="#" method="post" autocomplete="on"> --%>
+                <%--<form --%>
                 <h2>Registro </h2>
                 <p>
                     <label for="usernamesignup" class="uname" data-icon=" "><span>Nombre Completo</span></label>
@@ -48,7 +45,7 @@
                     <span>¿Ya tienes cuenta?</span>
                     <a href="LogIn.aspx" class="to_register">Ingresa</a>
                 </p>
-                <%--                    </form>--%>
+                <%--</form>--%>
             </div>
         </div>
     </form>

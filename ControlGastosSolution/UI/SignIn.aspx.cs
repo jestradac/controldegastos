@@ -15,7 +15,6 @@ namespace UI
         bool hayError = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             if (!IsPostBack)
             {
                 Inicializar();
@@ -61,7 +60,6 @@ namespace UI
         {
             BRL.tbl_Usuario usuario = new BRL.tbl_Usuario();
             
-
             if (usuario.existeEmail(this.txtEmailSigIn.Text.Trim()))
             {
                 mensaje += "- El correo electrónico ingresado ya existe. \n";

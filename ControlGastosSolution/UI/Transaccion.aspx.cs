@@ -20,13 +20,13 @@ namespace UI
         void prepararFormulario()
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
+
             if (Session["usuario"] == null)
             {
                 Response.Redirect("LogIn.aspx");
             }
             else
             {
-
                 objUsuario = (BRL.tbl_Usuario)Session["usuario"];
                 System.Web.UI.WebControls.Label lblUsuario = (System.Web.UI.WebControls.Label)Master.FindControl("lblUsuario");
                 lblUsuario.Text = objUsuario.nombreCompleto;
@@ -35,12 +35,12 @@ namespace UI
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
             ddlCuenta.DataSource = objCuenta.listartbl_Cuentas(objUsuario.idUsuario);
             ddlCuenta.DataValueField = "idCuenta";
-            ddlCuenta.DataTextField = "nombre";
+            ddlCuenta.DataTextField = "nombreSaldo";
             ddlCuenta.DataBind();
 
             ddlCuentaDestino.DataSource = objCuenta.listartbl_Cuentas(objUsuario.idUsuario);
             ddlCuentaDestino.DataValueField = "idCuenta";
-            ddlCuentaDestino.DataTextField = "nombre";
+            ddlCuentaDestino.DataTextField = "nombreSaldo";
             ddlCuentaDestino.DataBind();
 
             ddlTipoTransaccion.Items.Clear();
@@ -100,8 +100,6 @@ namespace UI
                 String monto = objTransaccion.monto.ToString();
                 monto = monto.Replace(",", ".");
                 this.txbMonto.Text = monto;
-                //this.txbFechaTrasaccion.Text = objTransaccion.fechaTransaccion.ToString();
-                
             }
         }
 
@@ -122,7 +120,6 @@ namespace UI
             decimal saldo = 0;
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
             objUsuario = (BRL.tbl_Usuario)Session["usuario"];
-
             BRL.tbl_Transaccion objTransaccion = new BRL.tbl_Transaccion();
             BRL.tbl_Cuenta objCuenta = new BRL.tbl_Cuenta();
             saldo = objCuenta.verSaldo(int.Parse(ddlCuenta.SelectedValue));
@@ -134,9 +131,16 @@ namespace UI
             }
             String monto = this.txbMonto.Text;
             monto = monto.Replace(".", ",");
-            
+
+            if (decimal.Parse(monto) <= 0)
+            {
+                MessageBox.Show("El monton tiene que ser mayor a 0");
+                return;
+            }
+
             BRL.tbl_Concepto auxConcepto = new BRL.tbl_Concepto();
             auxConcepto = auxConcepto.traertbl_Concepto(int.Parse(ddlConcepto.SelectedValue));
+
             if (auxConcepto.tipoTransaccion)
             {
                 if (saldo < decimal.Parse(monto)) //Verifico si tengo saldo
@@ -146,24 +150,43 @@ namespace UI
                 }
                 monto = "-" + monto;
             }
+
             objTransaccion.monto = Decimal.Parse(monto);
             objTransaccion.fechaTransaccion = DateTime.Now;
             objTransaccion.idCuenta = int.Parse(ddlCuenta.SelectedValue);
+
             if (ddlTipoTransaccion.SelectedValue == "T")
             {
+                if (saldo < decimal.Parse(monto)) //Verifico si tengo saldo
+                {
+                    MessageBox.Show("Saldo Insuficiente");
+                    return;
+                }
+
+                monto = "-" + monto;
+                objTransaccion.monto = Decimal.Parse(monto);
+
+                if (ddlCuenta.SelectedValue == ddlCuentaDestino.SelectedValue)
+                {
+                    MessageBox.Show("No se puede realizar el traspaso, las cuentas son iguales");
+                    return;
+                }
+
                 objTransaccion.idConcepto = 2;//Traspaso Egreso
             }
             else
             {
                 objTransaccion.idConcepto = int.Parse(ddlConcepto.SelectedValue);
             }
+
             objTransaccion.eliminado = false;
 
             auxControl = esEditar ? objTransaccion.modificar() : objTransaccion.guardar();
+
             if (ddlTipoTransaccion.SelectedValue == "T")
             {
                 BRL.tbl_Transaccion objTransaccionRef = new BRL.tbl_Transaccion();
-                objTransaccionRef.monto = objTransaccion.monto;
+                objTransaccionRef.monto = -objTransaccion.monto;
                 objTransaccionRef.idConcepto = 1;
                 objTransaccionRef.idCuenta = int.Parse(ddlCuentaDestino.SelectedValue);
                 objTransaccionRef.fechaTransaccion = objTransaccion.fechaTransaccion;
@@ -199,17 +222,14 @@ namespace UI
                 return true;
             }
         }
-      
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             guardar();
         }
-
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("ListadoTransacciones.aspx");
         }
-
         protected void ddlTipoTransaccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             BRL.tbl_Usuario objUsuario = new BRL.tbl_Usuario();
@@ -228,11 +248,6 @@ namespace UI
                 ddlCuentaDestino.Visible = false;
                 ddlConcepto.Visible = true;
             }
-        }
-
-        protected void ddlTipoTransaccion_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-
         }
     }
 }
