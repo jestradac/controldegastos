@@ -60,7 +60,7 @@ namespace UI
 
                 if (objTransaccion.tbl_Concepto.idConcepto > 2)
                 {
-                    if (objTransaccion.tbl_Concepto.idConcepto.Equals(true))
+                    if (objTransaccion.tbl_Concepto.tipoTransaccion.Equals(false))
                     {
                         lblTipo.Text = "Ingreso";
                         lblMonto.CssClass = "float-right success";
